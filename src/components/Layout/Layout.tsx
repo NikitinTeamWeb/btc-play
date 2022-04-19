@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Menu from '../Menu/Menu';
 
 import styles from './layout.module.scss';
 
@@ -17,9 +18,16 @@ const Layout: FC<IProps> = ({ title = 'Страница', children }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Header />
-      <div className={styles['app-inner']}>{children}</div>
-      <Footer />
+      <div className={styles.content}>
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+        <div className={styles.main}>
+          <Header />
+          <div className={styles['app-inner']}>{children}</div>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

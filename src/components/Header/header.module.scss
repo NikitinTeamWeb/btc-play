@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.login {
+  border: 2px solid #ffffff;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.registration {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    #f8ad29 0deg,
+    #e47d22 360deg
+  );
+  border-radius: 28px;
+  padding: 15px 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #190224;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 36px;
+  cursor: pointer;
+}
