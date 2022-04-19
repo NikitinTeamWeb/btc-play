@@ -1,0 +1,55 @@
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 13px 15px;
+  border-radius: 83px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
+  width: 10%;
+  min-width: 40px;
+  &.active {
+    background: #262626;
+    border-color: #323232;
+    width: 100%;
+    .close {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .description {
+      opacity: 1;
+    }
+    input {
+      pointer-events: all;
+    }
+  }
+  input {
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    width: 100%;
+    padding: 0 15px;
+    pointer-events: none;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  pointer-events: none;
+}

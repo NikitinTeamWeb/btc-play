@@ -143,6 +143,10 @@ input[type='search']::-webkit-search-results-decoration {
   -moz-appearance: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 input[type='search'] {
   -webkit-appearance: none;
   -moz-appearance: none;
