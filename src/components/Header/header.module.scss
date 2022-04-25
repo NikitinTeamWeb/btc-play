@@ -23,7 +23,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 13px 28px;
   cursor: pointer;
 }
 
@@ -52,6 +52,22 @@
   align-items: center;
   margin-left: 36px;
   cursor: pointer;
+  max-width: 24px;
+  min-width: 24px;
+  width: 100%;
+  position: relative;
+}
+
+.helpNew:after {
+  content: '';
+  background: #ea4949;
+  border: 3px solid #191919;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: -2px;
+  right: -4px;
 }
 
 .search {

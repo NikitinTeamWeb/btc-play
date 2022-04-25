@@ -2,7 +2,7 @@
 @import './var';
 
 body {
-  background: #000;
+  background: #1a1a1a;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
 }
@@ -15,4 +15,15 @@ body {
 img {
   max-width: 100%;
   display: inline-block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:after {
+  box-sizing: border-box;
+}
+*:before {
+  box-sizing: border-box;
 }
