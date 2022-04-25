@@ -4,14 +4,10 @@ import Select from '../Select/Select';
 import styles from './sorting.module.scss';
 
 interface IProps {
-  // options?: Array<any>;
+  title: string;
 }
 
-const Sorting: React.FC<IProps> = (
-  {
-    // options = [],
-  }
-) => {
+const Sorting: React.FC<IProps> = ({ title }) => {
   const [sortingType, setSortingType] = useState<string>('');
   const [sortingTitle, setSortingTitle] = useState<string>('');
 
@@ -49,7 +45,7 @@ const Sorting: React.FC<IProps> = (
         title={sortingTitle}
         onChange={getSortingData}
         options={options}
-        placeholder={`Сортування`}
+        placeholder={title}
       />
     </div>
   );

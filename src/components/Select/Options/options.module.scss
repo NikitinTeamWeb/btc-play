@@ -4,12 +4,13 @@
   text-align: left;
   position: relative;
   z-index: 1;
-  background: white;
-  padding: 14px 0;
+  background: transparent;
+  // padding: 14px 0;
 }
 
 .option {
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 20px;
   padding: 8px 15px;
   transition: all 0.2s ease;
   cursor: pointer;
