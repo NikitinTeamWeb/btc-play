@@ -1,6 +1,8 @@
 import { ReactNode, FC } from 'react';
 
 import Filters from '../Filters/Filters';
+import Recent from '../Recent/Recent';
+import Recommended from '../Recommended/Recommended';
 
 import classnames from 'classnames';
 
@@ -14,7 +16,15 @@ const Search = () => {
       </p>
       <div className={styles.block}>
         <div className={styles.blockWrapper}>
-          <Filters />
+          <div className={styles.filters}>
+            <Filters />
+          </div>
+          <div className={styles.recent}>
+            <Recent />
+          </div>
+          <div className={styles.recommended}>
+            <Recommended />
+          </div>
         </div>
       </div>
     </div>

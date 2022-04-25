@@ -1,0 +1,23 @@
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+.icon {
+  max-width: 18px;
+  width: 100%;
+  margin-right: 10px;
+}
