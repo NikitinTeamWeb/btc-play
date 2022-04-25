@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lingui/macro": "^3.13.2",
     "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
     "dotenv": "^16.0.0",

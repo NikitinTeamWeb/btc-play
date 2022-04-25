@@ -1,0 +1,18 @@
+.sorting {
+  margin-bottom: 14px;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .sorting {
+    margin: 0;
+    margin-left: auto;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sorting {
+    max-width: 130px;
+  }
+}
