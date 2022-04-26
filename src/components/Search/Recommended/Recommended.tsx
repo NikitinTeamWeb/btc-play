@@ -6,7 +6,7 @@ import Img1 from '../../../assets/images/recommendedGames/img1.png';
 import Img2 from '../../../assets/images/recommendedGames/img2.png';
 import Img3 from '../../../assets/images/recommendedGames/img3.png';
 
-import filterIcon from '../../../assets/images/icons/filter.png';
+import recommendedIcon from '../../../assets/images/icons/recommended.png';
 
 const Recommended = () => {
   const options = useMemo(
@@ -31,7 +31,7 @@ const Recommended = () => {
     <div className={styles.block}>
       <div className={styles.title}>
         <span className={styles.icon}>
-          <img src={filterIcon.src} alt="" />
+          <img src={recommendedIcon.src} alt="" />
         </span>
         Recommended Games
       </div>

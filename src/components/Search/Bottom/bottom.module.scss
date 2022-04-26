@@ -18,16 +18,24 @@
 .block {
   background: #262626;
   border-radius: 20px;
-  padding: 30px 12px 30px 30px;
-  max-height: 670px;
-  min-height: 500px;
+  padding: 11px 12px 0px 30px;
+  max-height: 527px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s ease-in;
 }
 
 .blockWrapper {
   padding-right: 10px;
   overflow-x: auto;
-  height: max-content;
-  min-height: 500px;
+  padding: 19px 0 30px;
+}
+
+.filters {
+  margin-bottom: 6px;
+}
+
+.recent {
+  margin-bottom: 39px;
 }
