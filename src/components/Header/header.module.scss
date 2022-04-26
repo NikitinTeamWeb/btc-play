@@ -14,7 +14,7 @@
 }
 
 .login {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
   border-radius: 28px;
   font-weight: 700;
   font-size: 12px;
@@ -22,7 +22,7 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white);
   padding: 13px 28px;
   cursor: pointer;
 }

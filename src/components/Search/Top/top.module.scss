@@ -10,8 +10,8 @@
   width: 10%;
   min-width: 40px;
   &.active {
-    background: #262626;
-    border-color: #323232;
+    background: var(--grey);
+    border-color: var(--borderGrey);
     width: 100%;
     .close {
       opacity: 1;
@@ -30,7 +30,7 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 20px;
-    color: #fff;
+    color: var(--white);
     width: 100%;
     padding: 0 15px;
     pointer-events: none;
