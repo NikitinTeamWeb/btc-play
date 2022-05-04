@@ -1,0 +1,38 @@
+.container {
+  max-width: 170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.blocks {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.block {
+  width: calc(33.333% - 10px);
+  margin: 0 5px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closed {
+  position: relative;
+  img {
+    opacity: 0.4;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    width: 22px;
+    height: 22px;
+    background-image: url(../../../../assets/images/menu/icon_lock.png);
+    background-size: cover;
+  }
+}

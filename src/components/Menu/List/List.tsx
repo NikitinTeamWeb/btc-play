@@ -1,6 +1,8 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 
+import Promotions from './Promotions/Promotions';
+
 import styles from './list.module.scss';
 
 import HomeIcon from '../../../assets/images/menu/icon_main.png';
@@ -8,6 +10,7 @@ import SlotsIcon from '../../../assets/images/menu/icon_slots.png';
 import LiveIcon from '../../../assets/images/menu/icon_live.png';
 import VipIcon from '../../../assets/images/menu/icon_vip.png';
 import BlackjackIcon from '../../../assets/images/menu/icon_blackjack.png';
+import AffiliateIcon from '../../../assets/images/menu/icon_affiliate.png';
 
 const List = () => {
   const navigationList = useMemo(
@@ -42,6 +45,12 @@ const List = () => {
         icon: BlackjackIcon.src,
         url: '/',
       },
+      {
+        id: 5,
+        title: `Affiliate`,
+        icon: AffiliateIcon.src,
+        url: '/',
+      },
     ],
     []
   );
@@ -49,7 +58,7 @@ const List = () => {
   return (
     <div className={styles.list}>
       {navigationList.map(({ id, title, icon, url }) => {
-        return (
+        return title !== 'Promotions' ? (
           <Link href={url} key={id}>
             <a className={styles.link}>
               <span className={styles.icon}>
@@ -58,6 +67,16 @@ const List = () => {
               {title}
             </a>
           </Link>
+        ) : (
+          <div className={styles.promotions} key={id}>
+            <div className={styles.link}>
+              <span className={styles.icon}>
+                <img src={icon} alt="" />
+              </span>
+              {title}
+            </div>
+            <Promotions />
+          </div>
         );
       })}
     </div>
