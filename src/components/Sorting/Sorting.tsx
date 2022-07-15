@@ -5,9 +5,10 @@ import styles from './sorting.module.scss';
 
 interface IProps {
   title: string;
+  options: { title: string; value: string }[];
 }
 
-const Sorting: React.FC<IProps> = ({ title }) => {
+const Sorting: React.FC<IProps> = ({ title = 'ytn', options }) => {
   const [sortingType, setSortingType] = useState<string>('');
   const [sortingTitle, setSortingTitle] = useState<string>('');
 
@@ -15,28 +16,6 @@ const Sorting: React.FC<IProps> = ({ title }) => {
     setSortingTitle(title);
     setSortingType(value);
   }, []);
-
-  const options = useMemo(
-    () => [
-      {
-        title: `За популярністю`,
-        value: 'popularity',
-      },
-      {
-        title: `За новинками`,
-        value: 'newest',
-      },
-      {
-        title: `Ціна від найнижчої`,
-        value: 'lowest',
-      },
-      {
-        title: `Ціна від найвищої`,
-        value: 'expensive',
-      },
-    ],
-    []
-  );
 
   return (
     <div className={styles.sorting}>

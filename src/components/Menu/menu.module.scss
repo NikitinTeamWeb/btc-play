@@ -17,3 +17,10 @@
 .list {
   margin-top: 30px;
 }
+
+.line {
+  background: #191919;
+  height: 2px;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}

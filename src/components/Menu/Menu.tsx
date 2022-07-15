@@ -1,4 +1,5 @@
 import List from './List/List';
+import Language from './Language/Language';
 
 import styles from './menu.module.scss';
 
@@ -13,6 +14,10 @@ const Menu = () => {
         </div>
         <div className={styles.list}>
           <List />
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.language}>
+          <Language />
         </div>
       </div>
     </div>
