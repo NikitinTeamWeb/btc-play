@@ -16,7 +16,7 @@ const Menu = () => {
           <List />
         </div>
         <div className={styles.line}></div>
-        <div className={styles.language}>
+        <div className={styles.block}>
           <Language />
         </div>
       </div>

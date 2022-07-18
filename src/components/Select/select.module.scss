@@ -19,6 +19,9 @@
   font-size: 12px;
   line-height: 20px;
   color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .select {
@@ -29,6 +32,24 @@
   margin-left: auto;
   padding: 10px 15px;
   position: relative;
+  transition: all 0.1s ease-in;
+}
+
+.grey {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: transparent;
+  border-radius: 14px;
+  padding: 14px 19px;
+  &.opened {
+    border-radius: 14px 14px 0 0;
+  }
+  .content {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: transparent;
+  }
+  .desktop-title {
+    font-size: 14px;
+  }
 }
 
 .content {
@@ -67,6 +88,14 @@
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+}
+.icon {
+  max-width: 16px;
+  min-width: 16px;
+  margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {

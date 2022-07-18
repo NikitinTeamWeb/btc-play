@@ -12,10 +12,12 @@ import styles from './select.module.scss';
 
 interface IProps {
   choosedType: string;
-  onChange: (val: string, title: string) => void;
+  onChange: (val: string, title: string, icon: string) => void;
   options: Array<Option>;
-  placeholder: string;
+  placeholder?: string;
   title: string;
+  icon?: string;
+  style?: string;
 }
 
 type Option = {
@@ -29,6 +31,8 @@ const Select: React.FC<IProps> = ({
   options,
   placeholder,
   title,
+  style,
+  icon,
 }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   // const isMobile = useMediaQuery(767);
@@ -62,14 +66,22 @@ const Select: React.FC<IProps> = ({
 
   return (
     <div
-      className={cn(styles.select, { [styles.opened]: isOpen })}
+      className={cn(styles.select, {
+        [styles.opened]: isOpen,
+        [styles[style || '']]: style,
+      })}
       ref={sortingMenu}
     >
       <div className={styles.title} onClick={() => setOpen((prev) => !prev)}>
         <div className={styles['desktop-title']}>
+          {icon && (
+            <span className={styles.icon}>
+              <img src={icon} alt="" />{' '}
+            </span>
+          )}
           {title ? title : placeholder}
         </div>
-        <div className={styles['mobile-title']}>Сортування</div>
+
         <div className={cn(styles.arrow, { [styles.rotate]: isOpen })}>
           <ArrowDownIcon />
         </div>

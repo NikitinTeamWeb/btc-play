@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" type="image/x-icon" href="/favicon.png" />
           <link rel="stylesheet" href="/fonts/roboto/stylesheet.css" />
+          <link rel="stylesheet" href="/fonts/montserrat/stylesheet.css" />
         </Head>
         <body>
           <Main />

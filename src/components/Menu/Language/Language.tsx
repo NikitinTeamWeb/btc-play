@@ -3,24 +3,30 @@ import Sorting from '../../Sorting/Sorting';
 
 import styles from './language.module.scss';
 
+import EnglichIcon from '../../../assets/images/menu/english.png';
+
 const Language = () => {
   const options = useMemo(
     () => [
       {
-        title: `За популярністю`,
-        value: 'popularity',
+        icon: EnglichIcon.src,
+        title: `English`,
+        value: 'English',
       },
       {
-        title: `За новинками`,
-        value: 'newest',
+        icon: EnglichIcon.src,
+        title: `French`,
+        value: 'French',
       },
       {
-        title: `Ціна від найнижчої`,
-        value: 'lowest',
+        icon: EnglichIcon.src,
+        title: `Polish`,
+        value: 'Polish',
       },
       {
-        title: `Ціна від найвищої`,
-        value: 'expensive',
+        icon: EnglichIcon.src,
+        title: `Spanish`,
+        value: 'Spanish',
       },
     ],
     []
@@ -29,7 +35,7 @@ const Language = () => {
   return (
     <div className={styles.block}>
       <p className={styles.label}>Change language</p>
-      <Sorting options={options} />
+      <Sorting options={options} style="grey" />
     </div>
   );
 };
