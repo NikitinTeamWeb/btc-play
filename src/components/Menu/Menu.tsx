@@ -3,14 +3,14 @@ import Language from './Language/Language';
 
 import styles from './menu.module.scss';
 
-import LogoImg from '../../assets/images/menu/logo.png';
+import LogoIcon from '../../assets/images/menu/logo.svg';
 
 const Menu = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.menuWrapper}>
         <div className={styles.logo}>
-          <img src={LogoImg.src} alt="" />
+          <LogoIcon />
         </div>
         <div className={styles.list}>
           <List />

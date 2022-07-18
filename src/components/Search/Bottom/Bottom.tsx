@@ -1,6 +1,6 @@
 import { ReactNode, FC } from 'react';
 
-import Filters from '../Filters/Filters';
+import Filters from '../Filters/FIlters';
 import Recent from '../Recent/Recent';
 import Recommended from '../Recommended/Recommended';
 

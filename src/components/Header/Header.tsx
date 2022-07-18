@@ -5,8 +5,7 @@ import styles from './header.module.scss';
 
 import Search from '../Search/Search';
 
-import HelpIcon from '../../assets/images/icons/help.svg';
-import SlideImg1 from '../../assets/images/icons/icon_Help.png';
+import HelpIcon from '../../assets/images/icons/icon_Help.svg';
 
 const Header = () => {
   const [isNewHelp, setIsNewHelp] = useState(true);
@@ -21,7 +20,7 @@ const Header = () => {
         <div
           className={classnames(styles.help, { [styles.helpNew]: isNewHelp })}
         >
-          <img src={SlideImg1.src} alt="" />
+          <HelpIcon />
         </div>
       </div>
     </div>

@@ -4,8 +4,8 @@ import classnames from 'classnames';
 
 import styles from './top.module.scss';
 
-import SearchIcon from '../../../assets/images/icons/search.png';
-import CloseIcon from '../../../assets/images/icons/close.png';
+import SearchSvg from '../../../assets/images/icons/search.svg';
+import CloseSvg from '../../../assets/images/icons/close.svg';
 
 interface IProps {
   isActive: boolean;
@@ -26,13 +26,13 @@ const Top: FC<IProps> = ({ isActive, setIsActive, setIsActiveResults }) => {
   return (
     <div className={classnames(styles.block, { [styles.active]: isActive })}>
       <div className={styles.button} onClick={() => setIsActive(true)}>
-        <img src={SearchIcon.src} alt="" />
+        <SearchSvg />
       </div>
       {isActive && (
         <>
           <input type="text" onChange={showResult} />
           <div className={styles.close} onClick={hideSearch}>
-            <img src={CloseIcon.src} alt="" />
+            <CloseSvg />
           </div>
         </>
       )}

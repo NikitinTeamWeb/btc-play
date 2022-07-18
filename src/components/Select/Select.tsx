@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { Trans } from '@lingui/macro';
 // import useMediaQuery from 'components/useMediaQuery';
 import Options from './Options/Options';
-import ArrowDown from '../../assets/images/icons/icon_dropdown.png';
+import ArrowDownIcon from '../../assets/images/icons/icon_dropdown.svg';
 // import SortImage from 'images/icons/sort.svg';
 // import ArrowLeft from 'images/icons/chevron-left.svg';
 // import Check from 'images/icons/checkbox-check-white.svg';
@@ -71,8 +71,7 @@ const Select: React.FC<IProps> = ({
         </div>
         <div className={styles['mobile-title']}>Сортування</div>
         <div className={cn(styles.arrow, { [styles.rotate]: isOpen })}>
-          {/* <ArrowDown /> */}
-          <img src={ArrowDown.src} alt="" />
+          <ArrowDownIcon />
         </div>
       </div>
       <div className={cn(styles.content, { [styles.hidden]: !isOpen })}>

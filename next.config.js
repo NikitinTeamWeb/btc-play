@@ -29,10 +29,18 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins(
-  [
-    [withImages, { exclude: path.join(__dirname, 'src/assets/images') }],
-    withFonts,
-  ],
-  nextConfig
-);
+module.exports = withPlugins([
+  [withImages, { exclude: path.join(__dirname, 'src/assets/images') }],
+  withFonts,
+  {
+    reactStrictMode: true,
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      });
+
+      return config;
+    },
+  },
+]);

@@ -4,7 +4,7 @@ import Sorting from '../../Sorting/Sorting';
 
 import styles from './filters.module.scss';
 
-import filterIcon from '../../../assets/images/icons/filter.png';
+import FilterIcon from '../../../assets/images/icons/filter.svg';
 
 const Filters = () => {
   const options = useMemo(
@@ -74,7 +74,7 @@ const Filters = () => {
     <div className={styles.block}>
       <div className={styles.title}>
         <span className={styles.icon}>
-          <img src={filterIcon.src} alt="" />
+          <FilterIcon />
         </span>
         Filters
       </div>

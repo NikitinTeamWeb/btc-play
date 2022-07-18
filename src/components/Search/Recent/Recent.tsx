@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import styles from './recent.module.scss';
 
-import recentIcon from '../../../assets/images/icons/recent.png';
+import RecentIcon from '../../../assets/images/icons/recent.svg';
 
 const Recent = () => {
   const options = useMemo(
@@ -35,7 +35,7 @@ const Recent = () => {
           return (
             <div className={styles.item} key={id}>
               <span className={styles.icon}>
-                <img src={recentIcon.src} alt="" />
+                <RecentIcon />
               </span>
               <p>{title}</p>
             </div>
