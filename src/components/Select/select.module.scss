@@ -36,7 +36,7 @@
 }
 
 .grey {
-  background: rgba(255, 255, 255, 0.09);
+  background: var(--greyBackground);
   border-color: transparent;
   border-radius: 14px;
   padding: 14px 19px;
@@ -44,7 +44,7 @@
     border-radius: 14px 14px 0 0;
   }
   .content {
-    background: rgba(255, 255, 255, 0.09);
+    background: var(--greyBackground);
     border-color: transparent;
   }
   .desktop-title {

@@ -3,13 +3,18 @@ import Select from '../Select/Select';
 
 import styles from './sorting.module.scss';
 
+interface IOption {
+  title: string;
+  value: string;
+  icon: string;
+}
 interface IProps {
   title?: string;
   style?: string;
-  options: { title: string; value: string }[];
+  options: Array<IOption>;
 }
 
-const Sorting: React.FC<IProps> = ({ title = 'ytn', options, style }) => {
+const Sorting: React.FC<IProps> = ({ title = '', options, style }) => {
   const [sortingType, setSortingType] = useState<string>('');
   const [sortingIcon, setSortingIcon] = useState<string>('');
   const [sortingTitle, setSortingTitle] = useState<string>('');
@@ -25,9 +30,9 @@ const Sorting: React.FC<IProps> = ({ title = 'ytn', options, style }) => {
     []
   );
 
-  // useEffect(() => {
-  //   getSortingData('engils,', 'valud=e');
-  // }, []);
+  useEffect(() => {
+    getSortingData(options[0].title, options[0].value, options[0].icon);
+  }, []);
 
   return (
     <div className={styles.sorting}>
