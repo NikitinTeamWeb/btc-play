@@ -20,6 +20,10 @@
   border: 1px solid transparent;
   border-radius: 25px;
   position: relative;
+  margin-bottom: 2px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   &:hover {
     border-color: rgba(#f5a528, 0.6);
   }

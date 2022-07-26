@@ -1,0 +1,26 @@
+.button {
+  background: var(--greyBackground);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  &:hover {
+    border-color: #ffffff;
+    background: transparent;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}

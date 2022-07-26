@@ -1,6 +1,7 @@
 import List from './List/List';
 import Language from './Language/Language';
 import Theme from './Theme/Theme';
+import Support from './Support/Support';
 
 import styles from './menu.module.scss';
 
@@ -20,6 +21,10 @@ const Menu = () => {
         <div className={styles.block}>
           <Language />
           <Theme />
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.block}>
+          <Support />
         </div>
       </div>
     </div>

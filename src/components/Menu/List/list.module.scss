@@ -14,6 +14,25 @@
   text-decoration: none;
   padding-left: 56px;
   border-radius: 0 25px 25px 0;
+  transition: all 0.3s ease-in;
+  position: relative;
+  z-index: 2;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      89.96deg,
+      rgba(248, 173, 41, 0.04) 0.05%,
+      rgba(228, 125, 34, 0.1) 108.66%
+    );
+    border-radius: 0 25px 25px 0;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+  }
   .icon {
     max-width: 24px;
     width: 100%;
@@ -23,11 +42,9 @@
     margin-right: 5px;
   }
   &:hover {
-    background: linear-gradient(
-      89.96deg,
-      rgba(248, 173, 41, 0.04) 0.05%,
-      rgba(228, 125, 34, 0.1) 108.66%
-    );
     color: var(--white);
+    &:after {
+      opacity: 1;
+    }
   }
 }
