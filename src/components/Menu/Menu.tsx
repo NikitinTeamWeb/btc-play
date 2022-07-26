@@ -2,6 +2,7 @@ import List from './List/List';
 import Language from './Language/Language';
 import Theme from './Theme/Theme';
 import Support from './Support/Support';
+import Socials from './Socials/Socials';
 
 import styles from './menu.module.scss';
 
@@ -25,6 +26,7 @@ const Menu = () => {
         <div className={styles.line}></div>
         <div className={styles.block}>
           <Support />
+          <Socials />
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ const Sorting: React.FC<IProps> = ({ title = '', options, style }) => {
   }, []);
 
   return (
-    <div className={styles.sorting}>
+    <>
       <Select
         choosedType={sortingType}
         title={sortingTitle}
@@ -45,7 +45,7 @@ const Sorting: React.FC<IProps> = ({ title = '', options, style }) => {
         placeholder={title}
         style={style}
       />
-    </div>
+    </>
   );
 };
 
