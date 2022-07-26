@@ -34,11 +34,11 @@ const Options: React.FC<IProps> = ({
           }}
           key={value}
         >
-          {icon && (
+          {/* {icon && (
             <span className={styles.icon}>
               <img src={icon} alt="" />
             </span>
-          )}
+          )} */}
 
           {title}
         </div>

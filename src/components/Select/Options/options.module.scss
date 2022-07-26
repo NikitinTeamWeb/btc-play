@@ -4,26 +4,60 @@
   text-align: left;
   position: relative;
   z-index: 1;
-  // background: var(--greyBackground);
-  // padding: 14px 0;
+  padding: 4px;
 }
 
 .option {
   font-size: 12px;
   line-height: 20px;
-  padding: 8px 15px;
+  padding: 4px 23px 4px 10px;
   transition: all 0.2s ease;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+  color: rgba(#ffffff, 0.6);
+  border: 1px solid transparent;
+  border-radius: 25px;
+  position: relative;
   &:hover {
-    background: gray;
+    border-color: rgba(#f5a528, 0.6);
+  }
+  &:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    right: 9px;
+    top: calc(50% - 6px);
+    background: rgba(#f5a528, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+  }
+  &:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: calc(9px + 3px);
+    top: calc(50% - 3px);
+    background: #f5a528;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
   }
 }
 
 .selected {
-  background: gray;
+  border-color: rgba(#f5a528, 0.6);
+  color: #ffffff;
+  &:after,
+  &:before {
+    opacity: 1;
+  }
 }
 
 .icon {

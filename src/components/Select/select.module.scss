@@ -40,9 +40,6 @@
   border-color: transparent;
   border-radius: 14px;
   padding: 14px 19px;
-  &.opened {
-    border-radius: 14px 14px 0 0;
-  }
   .content {
     background: var(--greyBackground);
     border-color: transparent;
@@ -56,17 +53,14 @@
   position: absolute;
   width: calc(100% + 2px);
   left: -1px;
-  top: 100%;
+  top: calc(100% + 6px);
   background: var(--greyBackground);
   border: 1px solid var(--borderGrey);
   border-top: none;
   overflow: hidden;
-  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.42);
+  border-radius: 15px;
   z-index: 1;
-}
-
-.opened {
-  border-radius: 20px 20px 0 0;
 }
 
 .mobile {
