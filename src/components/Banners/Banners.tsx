@@ -1,12 +1,11 @@
 import { useRef, useMemo } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-import Link from 'next/link';
-import cn from 'classnames';
+import { Navigation, Pagination } from 'swiper';
 
 import SliderPagination from '../SliderControllers/Pagination/Pagination';
 import SliderNavigation from '../SliderControllers/Navigation/Navigation';
+import Banner from './Banner/Banner';
 
 import El1 from '../../assets/images/banners/banner-1/el-1.png';
 import El2 from '../../assets/images/banners/banner-1/el-2.png';
@@ -85,23 +84,13 @@ const Banners = () => {
         ({ id, title, button, url, background, backgroundElement }) => {
           return (
             <SwiperSlide key={id} className={styles.banner}>
-              <div className={styles.info}>
-                <h3
-                  className={styles.title}
-                  dangerouslySetInnerHTML={{ __html: title }}
-                ></h3>
-                <Link href={url}>
-                  <a className={cn(styles.button, 'button button-sm')}>
-                    {button}
-                  </a>
-                </Link>
-              </div>
-              <div className={styles.el}>
-                <img src={backgroundElement} alt="" />
-              </div>
-              <div className={styles.bg}>
-                <img src={background} alt="" />
-              </div>
+              <Banner
+                title={title}
+                button={button}
+                url={url}
+                background={background}
+                backgroundElement={backgroundElement}
+              />
             </SwiperSlide>
           );
         }
