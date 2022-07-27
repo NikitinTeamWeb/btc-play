@@ -1,0 +1,12 @@
+.blocks {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: -20px;
+}
+
+.block {
+  width: calc(16.6666% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
