@@ -71,6 +71,8 @@ img {
   display: inline-block;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease-in;
+
   &:before {
     content: '';
     position: absolute;
@@ -92,6 +94,17 @@ img {
 
 .button-sm {
   padding: 10px 20px;
+}
+
+.button-border {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+
+  &:hover {
+    border-color: #e47d22;
+    color: #190224;
+  }
 }
 
 .swiper-pagination {
@@ -124,4 +137,11 @@ img {
 .swiper-button-disabled {
   opacity: 0.4;
   pointer-events: none;
+}
+
+.title-section {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
 }

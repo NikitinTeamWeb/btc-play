@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper';
 
 import SliderPagination from '../SliderControllers/Pagination/Pagination';
 import SliderNavigation from '../SliderControllers/Navigation/Navigation';
-import Banner from './Banner/Banner';
+import Banner from '../Banner/Banner';
 
 import El1 from '../../assets/images/banners/banner-1/el-1.png';
 import El2 from '../../assets/images/banners/banner-1/el-2.png';
@@ -28,7 +28,7 @@ const Banners = () => {
         title: 'Check out <br> our hot <br> promotions',
         button: 'Detail',
         url: '/',
-        background: BG1.src,
+        backgroundImage: BG1.src,
         backgroundElement: El1.src,
       },
       {
@@ -36,7 +36,7 @@ const Banners = () => {
         title: 'Register now and start journey',
         button: 'Register now',
         url: '/',
-        background: BG2.src,
+        backgroundImage: BG2.src,
         backgroundElement: El2.src,
       },
       {
@@ -44,7 +44,7 @@ const Banners = () => {
         title: 'Create your Personal bonus andplay your way',
         button: 'Detail',
         url: '/',
-        background: BG3.src,
+        backgroundImage: BG3.src,
         backgroundElement: El3.src,
       },
       {
@@ -52,7 +52,7 @@ const Banners = () => {
         title: '1Create your Personal bonus andplay your way',
         button: 'Detail',
         url: '/',
-        background: BG3.src,
+        backgroundImage: BG3.src,
         backgroundElement: El3.src,
       },
     ],
@@ -79,28 +79,30 @@ const Banners = () => {
   );
 
   return (
-    <Swiper {...sliderParams}>
-      {bannersList.map(
-        ({ id, title, button, url, background, backgroundElement }) => {
-          return (
-            <SwiperSlide key={id} className={styles.banner}>
-              <Banner
-                title={title}
-                button={button}
-                url={url}
-                background={background}
-                backgroundElement={backgroundElement}
-              />
-            </SwiperSlide>
-          );
-        }
-      )}
+    <div className={styles.container}>
+      <Swiper {...sliderParams}>
+        {bannersList.map(
+          ({ id, title, button, url, backgroundImage, backgroundElement }) => {
+            return (
+              <SwiperSlide key={id} className={styles.banner}>
+                <Banner
+                  title={title}
+                  button={button}
+                  url={url}
+                  backgroundImage={backgroundImage}
+                  backgroundElement={backgroundElement}
+                />
+              </SwiperSlide>
+            );
+          }
+        )}
 
-      <div className={styles.controlles}>
-        <SliderPagination extClassName="banners" />
-        <SliderNavigation extClassName="banners" />
-      </div>
-    </Swiper>
+        <div className={styles.controlles}>
+          <SliderPagination extClassName="banners" />
+          <SliderNavigation extClassName="banners" />
+        </div>
+      </Swiper>
+    </div>
   );
 };
 
