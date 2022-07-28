@@ -7,6 +7,7 @@ import CasinoGame from '../components/CasinoGame/CasinoGame';
 import Games from '../components/Games/Games';
 import GameProviders from '../components/GameProviders/GameProviders';
 import NoCrypto from '../components/NoCrypto/NoCrypto';
+import Winner from '../components/Winner/Winner';
 
 import Layout from '../components/Layout/Layout';
 
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Games />
       <GameProviders />
       <NoCrypto />
+      <Winner />
     </Layout>
   );
 };

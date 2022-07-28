@@ -1,0 +1,35 @@
+.container {
+  padding: 30px 0;
+}
+
+.block {
+  background: #262626;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  max-width: 359px;
+}
+
+.table {
+  max-width: 453px;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+}
+
+.tableBlock {
+  background: #121212;
+  border-radius: 14px;
+  padding: 8px 0;
+}
+
+.info {
+  padding-left: 30px;
+}
+
+.button {
+  margin-top: 20px;
+}
