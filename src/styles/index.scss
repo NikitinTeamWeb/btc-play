@@ -68,11 +68,13 @@ img {
   color: #190224;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 2;
   transition: all 0.3s ease-in;
-
+  width: max-content;
   &:before {
     content: '';
     position: absolute;
@@ -90,6 +92,11 @@ img {
   &:hover:before {
     opacity: 1;
   }
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .button-sm {
@@ -100,7 +107,6 @@ img {
   border: 2px solid #ffffff;
   background: transparent;
   color: #ffffff;
-
   &:hover {
     border-color: #e47d22;
     color: #190224;

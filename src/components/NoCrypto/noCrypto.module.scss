@@ -1,0 +1,15 @@
+.block {
+  background-image: url(../../assets/images/main/noCrypto-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #e47d22;
+  border-radius: 20px;
+  padding: 28px 30px 28px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 10px;
+}
