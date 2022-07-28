@@ -1,4 +1,4 @@
-import { useRef, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
@@ -18,9 +18,6 @@ import styles from './banners.module.scss';
 import 'swiper/css';
 
 const Banners = () => {
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
-
   const bannersList = useMemo(
     () => [
       {
