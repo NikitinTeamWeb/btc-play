@@ -1,0 +1,11 @@
+.blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  margin: 0 10px;
+  max-width: 24px;
+  width: 100%;
+}

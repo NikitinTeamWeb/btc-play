@@ -1,0 +1,41 @@
+.content {
+  background: #121212;
+}
+
+.top {
+  padding: 60px 20px 51px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #191919;
+  padding: 14px 28px;
+  .text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.coins {
+  margin: 0 auto;
+}
+
+.information {
+  padding-right: 71px;
+  position: relative;
+  max-width: 398px;
+  width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 70%;
+    background: #191919;
+  }
+}
