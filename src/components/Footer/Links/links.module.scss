@@ -1,0 +1,12 @@
+.link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  display: block;
+  &:hover {
+    color: #f8ad29;
+  }
+}

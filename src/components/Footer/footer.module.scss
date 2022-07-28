@@ -3,7 +3,9 @@
 }
 
 .top {
-  padding: 60px 20px 51px;
+  padding: 60px 70px 51px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bottom {

@@ -1,0 +1,22 @@
+.item {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #f8ad29;
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: #ffffff;
+  }
+}
