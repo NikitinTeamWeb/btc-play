@@ -12,7 +12,7 @@ interface IProps {
 type Option = {
   title: string;
   value: string;
-  icon: string;
+  icon?: string;
 };
 
 const Options: React.FC<IProps> = ({
