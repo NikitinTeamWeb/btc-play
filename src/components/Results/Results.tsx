@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import Sorting from '../Sorting/Sorting';
 import CategoryTabs from './CategoryTabs/CategoryTabs';
 import Races from '../Races/Races';
+import AllBets from '../AllBets/AllBets';
 
 import IncognitoIcon from '../../assets/images/icons/icon_incognito.svg';
 
@@ -32,6 +33,28 @@ const Results = () => {
     []
   );
 
+  const category = useMemo(
+    () => [
+      {
+        component: <AllBets />,
+        category: 'myBets',
+      },
+      {
+        component: <AllBets />,
+        category: 'allBets',
+      },
+      {
+        component: <AllBets />,
+        category: 'highRollersBets',
+      },
+      {
+        component: <Races />,
+        category: 'races',
+      },
+    ],
+    []
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -52,7 +75,14 @@ const Results = () => {
         </div>
       </div>
       <div className={styles.content}>
-        <Races />
+        {category.map(
+          ({ category, component }) =>
+            isActiveCatagery === category && (
+              <div className={styles.bottom} key={category}>
+                {component}
+              </div>
+            )
+        )}
       </div>
     </div>
   );

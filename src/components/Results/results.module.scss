@@ -1,6 +1,11 @@
+.container {
+  padding: 10px 0;
+}
+
 .top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .tabs {
   margin-right: 10px;
