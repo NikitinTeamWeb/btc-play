@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import Sorting from '../Sorting/Sorting';
 import CategoryTabs from './CategoryTabs/CategoryTabs';
+import Races from '../Races/Races';
 
 import IncognitoIcon from '../../assets/images/icons/icon_incognito.svg';
 
@@ -50,7 +51,9 @@ const Results = () => {
           <Sorting options={options} style="grey" />
         </div>
       </div>
-      <div className={styles.content}>{isActiveCatagery}</div>
+      <div className={styles.content}>
+        <Races />
+      </div>
     </div>
   );
 };
