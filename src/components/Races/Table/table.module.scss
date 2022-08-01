@@ -1,0 +1,84 @@
+.top {
+  margin-bottom: 14px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(.top) {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  padding-bottom: 5px;
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.item {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:last-child {
+    justify-content: flex-end;
+
+    text-align: right;
+  }
+  &.player {
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.avatar {
+  max-width: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  max-width: 20px;
+  width: 100%;
+  margin-right: 10px;
+  img {
+    width: 20px;
+  }
+}
+
+.green {
+  color: #50bf62;
+}
+
+.position {
+  width: 20%;
+}
+.player {
+  width: 25%;
+}
+.wagered {
+  width: 25%;
+}
+.prize {
+  width: 30%;
+}

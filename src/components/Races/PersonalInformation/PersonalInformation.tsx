@@ -19,7 +19,7 @@ const PersonalInformation = () => {
         <p className={styles.description}>My Position</p>
         <p className={styles.text}>50th+</p>
       </div>
-      <div className={styles.position}>
+      <div className={styles.wagered}>
         <p className={styles.description}>Wagered</p>
         <p className={styles.text}>
           <span className={styles.icon}>
@@ -28,7 +28,7 @@ const PersonalInformation = () => {
           0.0000005
         </p>
       </div>
-      <div className={styles.position}>
+      <div className={styles.reach}>
         <p className={styles.description}>
           Wager to reach <span className={styles.green}>top 10</span>
         </p>

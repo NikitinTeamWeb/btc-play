@@ -53,3 +53,23 @@
 .green {
   color: #50bf62;
 }
+
+.reach {
+  text-align: right;
+  .text {
+    justify-content: flex-end;
+  }
+}
+
+.info {
+  width: 20%;
+}
+.position {
+  width: 25%;
+}
+.wagered {
+  width: 25%;
+}
+.reach {
+  width: 30%;
+}
