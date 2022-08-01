@@ -1,8 +1,73 @@
+.content {
+  background: #121212;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.image {
+  max-width: 283px;
+  width: 100%;
+}
+
 .description {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.6);
-  text-align: center;
   margin-bottom: 10px;
+}
+
+.time {
+  max-width: 454px;
+  width: 100%;
+  .description {
+    text-align: center;
+  }
+}
+
+.price {
+  margin-left: 14px;
+}
+
+.priceInfo {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 24px;
+  .icon {
+    max-width: 20px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .yellow {
+    margin-right: 8px;
+  }
+}
+
+.yellow {
+  color: #f6c722;
+}
+
+.daily {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f6c722;
+  margin-top: 24px;
 }

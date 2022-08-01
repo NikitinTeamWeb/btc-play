@@ -15,7 +15,7 @@ const Competition = () => {
           <img src={Image.src} alt="" />
         </div>
         <div className={styles.price}>
-          <p>Contest prize pool</p>
+          <p className={styles.description}>Contest prize pool</p>
           <h3 className={styles.priceInfo}>
             <span className={styles.icon}>
               <img src={BTC.src} alt="" />
