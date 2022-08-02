@@ -22,9 +22,7 @@ const Winner = () => {
           <img src={WinnerImg.src} alt="" />
         </div>
         <div className={styles.table}>
-          <div className={styles.tableBlock}>
-            <Table />
-          </div>
+          <Table />
         </div>
       </div>
     </div>

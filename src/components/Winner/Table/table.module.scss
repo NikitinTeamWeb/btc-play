@@ -1,3 +1,22 @@
+.block {
+  background: #121212;
+  border-radius: 14px;
+  padding: 4px 0;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../../../assets/images/main/winner-top.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+  }
+}
+
 .item {
   display: flex;
   justify-content: space-between;
@@ -6,10 +25,18 @@
   &:nth-child(even) {
     background: #1c1c1c;
   }
+  &:first-child {
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+  &:last-child {
+    padding-bottom: 16px;
+    padding-top: 8px;
+  }
 }
 
 .name {
-  width: 30%;
+  width: 37%;
   font-weight: 700;
   font-size: 14px;
   line-height: 30px;
@@ -30,8 +57,7 @@
   justify-content: flex-end;
   align-items: center;
   text-align: right;
-  width: 40%;
-
+  width: 37%;
   p {
     font-weight: 500;
     font-size: 14px;

@@ -10,14 +10,14 @@
 }
 
 .menu {
-  max-width: 260px;
+  width: 260px;
   width: 100%;
   flex-grow: 1;
 }
 
 .main {
-  width: 100%;
+  width: calc(100% - 260px);
   // padding: 0 30px;
-  padding-left: 14px;
+  padding-left: 29px;
   max-width: 1090px;
 }

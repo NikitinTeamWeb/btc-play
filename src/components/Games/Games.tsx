@@ -105,7 +105,7 @@ const Games = () => {
   );
 
   return (
-    <div className={styles.content}>
+    <div className={styles.container}>
       <div className={styles.blocks}>
         {gamesList.map(({ id, title, image, url, edge, coomigSoon }) => {
           return (

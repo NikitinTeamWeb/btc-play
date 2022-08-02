@@ -24,7 +24,7 @@ const AllBets = () => {
       {
         id: 1,
         gameIcon: <Dice />,
-        gameName: 'Dice',
+        gameName: 'Fire in The Hold',
         user: 'LordPinko',
         time: '1:22 PM',
         bet: '0.00134534',
