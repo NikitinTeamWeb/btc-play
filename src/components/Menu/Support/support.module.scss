@@ -24,3 +24,11 @@
   align-items: center;
   margin-right: 16px;
 }
+
+.closeMenu {
+  padding: 0;
+  width: max-content;
+  .icon {
+    margin-right: 0;
+  }
+}

@@ -15,3 +15,12 @@
   align-items: center;
   margin-top: 14px;
 }
+
+.closeMenu {
+  .links {
+    flex-direction: column;
+  }
+  .link {
+    margin-bottom: 26px;
+  }
+}

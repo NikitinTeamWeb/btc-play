@@ -1,14 +1,19 @@
+import { FC, useState } from 'react';
 import ModeColor from '../../ModeColor/ModeColor';
 
 import styles from './theme.module.scss';
 
-const Theme = () => {
+interface IProps {
+  isCloseMenu: boolean;
+}
+
+const Theme: FC<IProps> = ({ isCloseMenu }) => {
   return (
     <div className={styles.block}>
-      <p className={styles.label}>Theme</p>
+      {!isCloseMenu && <p className={styles.label}>Theme</p>}
       <div className={styles.main}>
-        <ModeColor />
-        <p className={styles.text}>Night</p>
+        <ModeColor isCloseMenu={isCloseMenu} />
+        {!isCloseMenu && <p className={styles.text}>Night</p>}
       </div>
     </div>
   );

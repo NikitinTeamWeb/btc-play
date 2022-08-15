@@ -26,7 +26,6 @@
   display: inline-block;
   transition: all 0.3s ease-in;
   cursor: pointer;
-
   &:after {
     content: '';
     position: absolute;
@@ -55,5 +54,25 @@
     top: 0px;
     left: 0px;
     transition: all 0.3s ease-in;
+  }
+}
+
+.closeMenu {
+  .block {
+    width: 38px;
+  }
+  input {
+    &:checked {
+      & + .label {
+        .block {
+          &:after {
+            left: 0;
+          }
+          &:before {
+            left: 0;
+          }
+        }
+      }
+    }
   }
 }

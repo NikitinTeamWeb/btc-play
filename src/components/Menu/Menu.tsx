@@ -39,13 +39,13 @@ const Menu: FC<IProps> = ({ setIsCloseMenu, isCloseMenu }) => {
         </div>
         <div className={styles.line}></div>
         <div className={styles.block}>
-          <Language />
-          <Theme />
+          <Language isCloseMenu={isCloseMenu} />
+          <Theme isCloseMenu={isCloseMenu} />
         </div>
         <div className={styles.line}></div>
         <div className={styles.block}>
-          <Support />
-          <Socials />
+          <Support isCloseMenu={isCloseMenu} />
+          <Socials isCloseMenu={isCloseMenu} />
         </div>
       </div>
     </div>

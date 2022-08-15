@@ -1,3 +1,5 @@
+import { FC } from 'react';
+import cn from 'classnames';
 import Link from 'next/link';
 
 import styles from './socials.module.scss';
@@ -7,7 +9,11 @@ import Facebook from '../../../assets/images/icons/social_Facebook.svg';
 import Telegram from '../../../assets/images/icons/social_Telegram.svg';
 import Twitter from '../../../assets/images/icons/social_Twitter.svg';
 
-const Socials = () => {
+interface IProps {
+  isCloseMenu: boolean;
+}
+
+const Socials: FC<IProps> = ({ isCloseMenu }) => {
   const socialsList = [
     {
       id: 0,
@@ -32,8 +38,10 @@ const Socials = () => {
   ];
 
   return (
-    <div className={styles.block}>
-      <h4 className={styles.title}>Official social networks</h4>
+    <div className={cn(styles.block, { [styles.closeMenu]: isCloseMenu })}>
+      {!isCloseMenu && (
+        <h4 className={styles.title}>Official social networks</h4>
+      )}
 
       <div className={styles.links}>
         {socialsList.map(({ id, icon, url }) => {

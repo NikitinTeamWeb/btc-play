@@ -55,7 +55,6 @@ const Promotions: FC<IProps> = ({ isCloseMenu }) => {
   );
 
   const changeStateMenu = () => {
-    console.log('oooo');
     setisOpenBlocks((prev) => !prev);
   };
 
@@ -69,7 +68,7 @@ const Promotions: FC<IProps> = ({ isCloseMenu }) => {
       className={cn(
         styles.container,
         { [styles.closeMenu]: isCloseMenu },
-        { [styles.openBlocks]: isOpenBlocks }
+        { [styles.openBlocks]: isOpenBlocks && isCloseMenu }
       )}
     >
       <div className={styles.blocks}>

@@ -51,6 +51,22 @@
   }
 }
 
+.greySmall {
+  background: var(--greyBackground);
+  border-color: transparent;
+  border-radius: 41px;
+  .desktop-title {
+    padding: 9px 17px;
+  }
+  .content {
+    background: var(--greyBackground);
+    border-color: transparent;
+  }
+  .desktop-title {
+    font-size: 14px;
+  }
+}
+
 .content {
   position: absolute;
   width: calc(100% + 2px);

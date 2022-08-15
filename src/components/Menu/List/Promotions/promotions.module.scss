@@ -69,13 +69,13 @@
   .block {
     width: 50px;
     margin: 0;
-    opacity: 0;
     pointer-events: none;
+    display: none;
   }
   .mainBlock {
-    display: block;
     opacity: 1;
     pointer-events: all;
+    display: block;
   }
   .closed {
     margin-right: 10px;
@@ -91,8 +91,8 @@
     width: 320px;
   }
   .block {
-    display: block;
     opacity: 1;
     pointer-events: all;
+    display: block;
   }
 }

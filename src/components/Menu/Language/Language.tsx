@@ -1,32 +1,47 @@
-import { useMemo } from 'react';
+import { useMemo, FC, useState } from 'react';
+import cn from 'classnames';
 import Sorting from '../../Sorting/Sorting';
 
 import styles from './language.module.scss';
 
 import EnglichIcon from '../../../assets/images/menu/english.png';
 
-const Language = () => {
-  const options = useMemo(
+interface IProps {
+  isCloseMenu: boolean;
+}
+
+const Language: FC<IProps> = ({ isCloseMenu }) => {
+  const [isOpenLangSelect, setIsOpenLangSelect] = useState(false);
+
+  const languageList = useMemo(
     () => [
       {
+        id: 0,
         icon: EnglichIcon.src,
         title: `English`,
-        value: 'English',
+        value: 'EN',
+        activeLanguage: false,
       },
       {
+        id: 1,
         icon: EnglichIcon.src,
         title: `French`,
-        value: 'French',
+        value: 'FR',
+        activeLanguage: true,
       },
       {
+        id: 2,
         icon: EnglichIcon.src,
         title: `Polish`,
-        value: 'Polish',
+        value: 'PL',
+        activeLanguage: false,
       },
       {
+        id: 3,
         icon: EnglichIcon.src,
         title: `Spanish`,
-        value: 'Spanish',
+        value: 'SP',
+        activeLanguage: false,
       },
     ],
     []
@@ -34,8 +49,30 @@ const Language = () => {
 
   return (
     <div className={styles.block}>
-      <p className={styles.label}>Change language</p>
-      <Sorting options={options} style="grey" />
+      {!isCloseMenu ? (
+        <>
+          <p className={styles.label}>Change language</p>
+          <Sorting options={languageList} style="grey" />
+        </>
+      ) : (
+        <>
+          {languageList
+            .filter((language) => language.activeLanguage == true)
+            .map((filteredLang) => (
+              <p
+                className={styles.description}
+                onClick={() => setIsOpenLangSelect(true)}
+              >
+                {filteredLang.value}
+              </p>
+            ))}
+          <div
+            className={cn(styles.select, { [styles.show]: isOpenLangSelect })}
+          >
+            <Sorting options={languageList} style="greySmall" />
+          </div>
+        </>
+      )}
     </div>
   );
 };
