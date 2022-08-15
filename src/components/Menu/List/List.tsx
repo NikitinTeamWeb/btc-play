@@ -1,5 +1,6 @@
-import { useMemo } from 'react';
+import { useMemo, FC } from 'react';
 import Link from 'next/link';
+import cn from 'classnames';
 
 import Promotions from './Promotions/Promotions';
 
@@ -12,7 +13,11 @@ import VipIcon from '../../../assets/images/menu/icon_vip.svg';
 import BlackjackIcon from '../../../assets/images/menu/icon_blackjack.svg';
 import AffiliateIcon from '../../../assets/images/menu/icon_affiliate.svg';
 
-const List = () => {
+interface IProps {
+  isCloseMenu: boolean;
+}
+
+const List: FC<IProps> = ({ isCloseMenu }) => {
   const navigationList = useMemo(
     () => [
       {
@@ -60,19 +65,22 @@ const List = () => {
       {navigationList.map(({ id, title, icon, url }) => {
         return title !== 'Promotions' ? (
           <Link href={url} key={id}>
-            <a className={styles.link}>
+            <a className={cn(styles.link, { [styles.closeMenu]: isCloseMenu })}>
               <span className={styles.icon}>{icon}</span>
-              {title}
+              {!isCloseMenu && title}
             </a>
           </Link>
         ) : (
-          <div className={styles.promotions} key={id}>
-            <div className={styles.link}>
+          <>
+            <div
+              className={cn(styles.link, { [styles.closeMenu]: isCloseMenu })}
+              key={id}
+            >
               <span className={styles.icon}>{icon}</span>
-              {title}
+              {!isCloseMenu && title}
             </div>
-            <Promotions />
-          </div>
+            <Promotions isCloseMenu={isCloseMenu} />
+          </>
         );
       })}
     </div>

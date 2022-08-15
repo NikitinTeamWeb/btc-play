@@ -3,16 +3,17 @@
   min-height: 100vh;
   background: #121212;
   height: 100%;
+  position: relative;
 }
 
 .logo {
-  max-width: 177px;
+  max-width: 202px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 15px;
-  margin: 0 13px 0 auto;
+  padding-left: 55px;
+  transition: all 0.3s ease-in;
 }
 
 .list {
@@ -31,4 +32,53 @@
   padding-left: 55px;
   padding-top: 29px;
   margin-bottom: 30px;
+}
+
+.button {
+  position: absolute;
+  background: #2e2e2e;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: -15px;
+}
+
+.buttonLine {
+  position: absolute;
+  width: 10px;
+  left: calc(50% - 5px);
+  height: 1px;
+  background: #ffffff;
+  border-radius: 3px;
+  display: inline-block;
+  transition: all 0.25s ease-in;
+  &1 {
+    top: 10px;
+  }
+  &2 {
+    top: 14px;
+  }
+  &3 {
+    top: 18px;
+  }
+}
+
+.closeMenu {
+  .buttonLine {
+    &1 {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    &2 {
+      opacity: 0;
+    }
+    &3 {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+  }
+  .logo {
+    padding-left: 25px;
+  }
 }

@@ -1,5 +1,5 @@
-import { useMemo } from 'react';
-import classnames from 'classnames';
+import { useMemo, FC, useState } from 'react';
+import cn from 'classnames';
 
 import styles from './promotions.module.scss';
 
@@ -10,7 +10,14 @@ import Icon4 from '../../../../assets/images/menu/icon_Promotions_04.png';
 import Icon5 from '../../../../assets/images/menu/icon_Promotions_05.png';
 import Icon6 from '../../../../assets/images/menu/icon_Promotions_06.png';
 
-const Promotions = () => {
+interface IProps {
+  isCloseMenu: boolean;
+}
+
+const Promotions: FC<IProps> = ({ isCloseMenu }) => {
+  const [isActiveBlock, setIsActiveBlock] = useState(0);
+  const [isOpenBlocks, setisOpenBlocks] = useState(false);
+
   const promotionList = useMemo(
     () => [
       {
@@ -46,14 +53,41 @@ const Promotions = () => {
     ],
     []
   );
+
+  const changeStateMenu = () => {
+    console.log('oooo');
+    setisOpenBlocks((prev) => !prev);
+  };
+
+  const changeActiveBlock = (id: number) => {
+    setIsActiveBlock(id);
+    changeStateMenu();
+  };
+
   return (
-    <div className={styles.container}>
+    <div
+      className={cn(
+        styles.container,
+        { [styles.closeMenu]: isCloseMenu },
+        { [styles.openBlocks]: isOpenBlocks }
+      )}
+    >
       <div className={styles.blocks}>
         {promotionList.map(({ id, icon, status }) => {
           return (
             <div
-              className={classnames(styles.block, { [styles.closed]: !status })}
+              className={cn(styles.block, {
+                [styles.closed]: !status,
+                [styles.mainBlock]: isActiveBlock == id,
+              })}
               key={id}
+              onClick={() => {
+                if (isCloseMenu) {
+                  isActiveBlock == id
+                    ? changeStateMenu()
+                    : changeActiveBlock(id);
+                }
+              }}
             >
               <img src={icon} alt="" />
             </div>

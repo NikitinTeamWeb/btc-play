@@ -6,7 +6,10 @@ const Theme = () => {
   return (
     <div className={styles.block}>
       <p className={styles.label}>Theme</p>
-      <ModeColor />
+      <div className={styles.main}>
+        <ModeColor />
+        <p className={styles.text}>Night</p>
+      </div>
     </div>
   );
 };

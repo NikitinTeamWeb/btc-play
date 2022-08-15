@@ -1,7 +1,11 @@
 .container {
-  max-width: 170px;
+  max-width: 226px;
+  height: 120px;
   width: 100%;
-  margin: 19px 5px 3px auto;
+  margin: 19px 0px 3px 0;
+  padding-left: 56px;
+  transition: all 0.3s ease-in;
+  position: relative;
 }
 
 .blocks {
@@ -9,19 +13,29 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 -5px;
+  position: absolute;
+  top: 0;
+  left: 46px;
+  transition: left 0.3s ease-in, background 0s ease-in;
+  width: 226px;
+  border-radius: 14px;
 }
 .block {
   width: calc(33.333% - 10px);
+  max-width: 50px;
   margin: 0 5px 10px;
   border-radius: 14px;
   background: var(--greyBackground);
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 50px;
+  cursor: pointer;
 }
 
 .closed {
   position: relative;
+  pointer-events: none;
   img {
     opacity: 0.4;
   }
@@ -34,5 +48,51 @@
     height: 22px;
     background-image: url(../../../../assets/images/menu/icon_lock.png);
     background-size: cover;
+  }
+}
+
+.mainBlock {
+  order: -1;
+}
+
+.closeMenu {
+  width: 75px;
+  height: 50px;
+  padding-left: 25px;
+  .blocks {
+    flex-wrap: nowrap;
+    left: 15px;
+    background: #272727;
+    margin: 0;
+    width: 50px;
+  }
+  .block {
+    width: 50px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mainBlock {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .closed {
+    margin-right: 10px;
+    &:after {
+      top: 7px;
+      right: 0px;
+    }
+  }
+}
+
+.openBlocks {
+  .blocks {
+    width: 320px;
+  }
+  .block {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
   }
 }
