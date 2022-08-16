@@ -60,6 +60,7 @@
 .closeMenu {
   .block {
     width: 38px;
+    transition: all 0s ease-in;
   }
   input {
     &:checked {

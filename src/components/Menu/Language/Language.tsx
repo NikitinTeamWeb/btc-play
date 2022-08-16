@@ -48,7 +48,7 @@ const Language: FC<IProps> = ({ isCloseMenu }) => {
   );
 
   return (
-    <div className={styles.block}>
+    <div className={cn(styles.block, { [styles.closeMenu]: isCloseMenu })}>
       {!isCloseMenu ? (
         <>
           <p className={styles.label}>Change language</p>

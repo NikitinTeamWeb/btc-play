@@ -67,3 +67,15 @@
     }
   }
 }
+
+.svg {
+  rect {
+    stroke: #ffffff;
+    transition: all 0.3s ease-in;
+  }
+  &:hover {
+    rect {
+      stroke: url(#paint0_linear_1072_20989);
+    }
+  }
+}
