@@ -61,11 +61,11 @@ const List: FC<IProps> = ({ isCloseMenu }) => {
   );
 
   return (
-    <div className={styles.list}>
+    <div className={cn(styles.list, { [styles.closeMenu]: isCloseMenu })}>
       {navigationList.map(({ id, title, icon, url }) => {
         return title !== 'Promotions' ? (
           <Link href={url} key={id}>
-            <a className={cn(styles.link, { [styles.closeMenu]: isCloseMenu })}>
+            <a className={styles.link}>
               <span className={styles.icon}>{icon}</span>
               {!isCloseMenu && title}
             </a>

@@ -23,31 +23,37 @@ const Promotions: FC<IProps> = ({ isCloseMenu }) => {
       {
         id: 0,
         icon: Icon1.src,
+        description: 'task',
         status: true,
       },
       {
         id: 1,
         icon: Icon2.src,
+        description: 'task',
         status: true,
       },
       {
         id: 2,
         icon: Icon3.src,
+        description: 'task',
         status: true,
       },
       {
         id: 3,
         icon: Icon4.src,
+        description: 'task task task',
         status: false,
       },
       {
         id: 4,
         icon: Icon5.src,
+        description: 'task',
         status: true,
       },
       {
         id: 5,
         icon: Icon6.src,
+        description: 'task',
         status: false,
       },
     ],
@@ -72,7 +78,7 @@ const Promotions: FC<IProps> = ({ isCloseMenu }) => {
       )}
     >
       <div className={styles.blocks}>
-        {promotionList.map(({ id, icon, status }) => {
+        {promotionList.map(({ id, icon, status, description }) => {
           return (
             <div
               className={cn(styles.block, {
@@ -89,6 +95,7 @@ const Promotions: FC<IProps> = ({ isCloseMenu }) => {
               }}
             >
               <img src={icon} alt="" />
+              <div className={styles.description}>{description}</div>
             </div>
           );
         })}
