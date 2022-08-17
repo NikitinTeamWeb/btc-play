@@ -22,9 +22,6 @@
   align-items: center;
   cursor: pointer;
   margin-right: 10px;
-  path {
-    transition: all 0.3s ease-in;
-  }
   &:hover {
     path {
       fill: #ffffff;

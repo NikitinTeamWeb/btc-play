@@ -10,14 +10,18 @@ import ChatIcon from '../../assets/images/icons/icon_Help.svg';
 
 const Chat = () => {
   const [isNewMessage, setIsNewMessage] = useState(false);
+  const [isOpenChat, setIsOpenChat] = useState(false);
 
   return (
     <div className={styles.content}>
-      <div className={cn(styles.button, { [styles.new]: isNewMessage })}>
+      <div
+        className={cn(styles.button, { [styles.new]: isNewMessage })}
+        onClick={() => setIsOpenChat(true)}
+      >
         <ChatIcon />
       </div>
-      <div className={styles.container}>
-        <Top />
+      <div className={cn(styles.container, { [styles.open]: isOpenChat })}>
+        <Top setIsOpenChat={setIsOpenChat} />
         <Main />
         <Bottom />
       </div>

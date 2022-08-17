@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import styles from './top.module.scss';
 
 import Language from '../../Language/Language';
@@ -6,7 +7,11 @@ import CupIcon from '../../../assets/images/chat/cup.svg';
 import InformationIcon from '../../../assets/images/icons/tooltip.svg';
 import CloseIcon from '../../../assets/images/chat/close.svg';
 
-const Top = () => {
+interface IProps {
+  setIsOpenChat: (val: boolean) => void;
+}
+
+const Top: FC<IProps> = ({ setIsOpenChat }) => {
   return (
     <div className={styles.content}>
       <div className={styles.language}>
@@ -18,7 +23,7 @@ const Top = () => {
       <div className={styles.cup}>
         <CupIcon />
       </div>
-      <div className={styles.close}>
+      <div className={styles.close} onClick={() => setIsOpenChat(false)}>
         <CloseIcon />
       </div>
     </div>

@@ -3,6 +3,8 @@
   padding: 20px 15px 21px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 5;
 }
 
 .language {
