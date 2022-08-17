@@ -1,16 +1,17 @@
 import { useMemo, FC, useState } from 'react';
 import cn from 'classnames';
-import Sorting from '../../Sorting/Sorting';
+import Sorting from '../Sorting/Sorting';
 
 import styles from './language.module.scss';
 
-import EnglichIcon from '../../../assets/images/menu/english.png';
+import EnglichIcon from '../../assets/images/menu/english.png';
 
 interface IProps {
-  isCloseMenu: boolean;
+  isCloseMenu?: boolean;
+  isChat?: boolean;
 }
 
-const Language: FC<IProps> = ({ isCloseMenu }) => {
+const Language: FC<IProps> = ({ isCloseMenu, isChat }) => {
   const [isOpenLangSelect, setIsOpenLangSelect] = useState(false);
 
   const languageList = useMemo(
@@ -51,8 +52,12 @@ const Language: FC<IProps> = ({ isCloseMenu }) => {
     <div className={cn(styles.block, { [styles.closeMenu]: isCloseMenu })}>
       {!isCloseMenu ? (
         <>
-          <p className={styles.label}>Change language</p>
-          <Sorting options={languageList} style="grey" />
+          {!isChat && <p className={styles.label}>Change language</p>}
+          {isChat ? (
+            <Sorting options={languageList} style="chatLanguage" />
+          ) : (
+            <Sorting options={languageList} style="grey" />
+          )}
         </>
       ) : (
         <>

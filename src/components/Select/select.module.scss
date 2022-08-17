@@ -67,6 +67,28 @@
   }
 }
 
+.chatLanguage {
+  background: var(--greyBackground);
+  border-color: transparent;
+  border-radius: 14px;
+  .desktop-title {
+    padding: 6px 10px;
+  }
+  .content {
+    background: var(--greyBackground);
+    border-color: transparent;
+  }
+  .title {
+    padding-right: 25px;
+  }
+  .desktop-title {
+    font-size: 14px;
+  }
+  .arrow {
+    right: 10px;
+  }
+}
+
 .content {
   position: absolute;
   width: calc(100% + 2px);

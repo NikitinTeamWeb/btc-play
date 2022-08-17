@@ -4,11 +4,10 @@ import classnames from 'classnames';
 import styles from './header.module.scss';
 
 import Search from '../Search/Search';
-
-import HelpIcon from '../../assets/images/icons/icon_Help.svg';
+import Chat from '../Chat/Chat';
 
 const Header = () => {
-  const [isNewHelp, setIsNewHelp] = useState(true);
+  const [isChatHelp, setIsChatHelp] = useState(true);
   return (
     <div className={styles.header}>
       <div className={styles.search}>
@@ -17,10 +16,8 @@ const Header = () => {
       <div className={styles.buttons}>
         <div className={styles.login}>Login</div>
         <div className={styles.registration}>Registration</div>
-        <div
-          className={classnames(styles.help, { [styles.helpNew]: isNewHelp })}
-        >
-          <HelpIcon />
+        <div className={styles.chat}>
+          <Chat />
         </div>
       </div>
     </div>

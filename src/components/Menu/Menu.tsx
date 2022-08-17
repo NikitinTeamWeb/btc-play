@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 
 import List from './List/List';
-import Language from './Language/Language';
+import Language from '../Language/Language';
 import Theme from './Theme/Theme';
 import Support from './Support/Support';
 import Socials from './Socials/Socials';
@@ -40,7 +40,9 @@ const Menu: FC<IProps> = ({ setIsCloseMenu, isCloseMenu }) => {
           </div>
           <div className={styles.line}></div>
           <div className={styles.block}>
-            <Language isCloseMenu={isCloseMenu} />
+            <div className={styles.language}>
+              <Language isCloseMenu={isCloseMenu} />
+            </div>
             <Theme isCloseMenu={isCloseMenu} />
           </div>
           <div className={styles.line}></div>
