@@ -1,0 +1,33 @@
+.content {
+  background: #121212;
+  height: 115px;
+  padding: 15px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.gif {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  path {
+    transition: all 0.3s ease-in;
+  }
+  &:hover {
+    path {
+      fill: #ffffff;
+    }
+  }
+}

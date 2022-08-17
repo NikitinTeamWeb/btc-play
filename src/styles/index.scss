@@ -32,6 +32,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+input {
+  font-family: 'Montserrat', sans-serif;
+  &::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
 .wrapper {
   max-width: 1400px;
   width: 100%;

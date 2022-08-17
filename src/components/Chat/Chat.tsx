@@ -3,6 +3,8 @@ import cn from 'classnames';
 import styles from './chat.module.scss';
 
 import Top from './Top/Top';
+import Main from './Main/Main';
+import Bottom from './Bottom/Bottom';
 
 import ChatIcon from '../../assets/images/icons/icon_Help.svg';
 
@@ -16,6 +18,8 @@ const Chat = () => {
       </div>
       <div className={styles.container}>
         <Top />
+        <Main />
+        <Bottom />
       </div>
     </div>
   );
