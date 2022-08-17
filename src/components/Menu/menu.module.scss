@@ -1,9 +1,17 @@
 .menu {
-  padding: 34px 30px 50px 0;
+  padding: 34px 25px 50px 56px;
   min-height: 100vh;
   background: #121212;
   height: 100%;
   position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease-in;
 }
 
 .logo {
@@ -12,8 +20,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 55px;
-  // transition: all 0.3s ease-in;
+  // padding-left: 55px;
+  transition: all 0.3s ease-in;
 }
 
 .list {
@@ -29,7 +37,7 @@
 }
 
 .block {
-  padding-left: 55px;
+  // padding-left: 55px;
   padding-top: 29px;
   margin-bottom: 30px;
   // transition: all 0.3s ease-in;
@@ -67,14 +75,10 @@
 }
 
 .closeMenu {
-  padding-left: 25px;
-  padding-right: 25px;
   width: 100%;
+  padding-left: 25px;
   .menuWrapper {
     max-width: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   .buttonLine {
     &1 {

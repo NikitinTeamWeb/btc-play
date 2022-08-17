@@ -12,18 +12,19 @@
   line-height: 50px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  padding-left: 56px;
+  // padding-left: 56px;
   border-radius: 0 25px 25px 0;
-  // transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   position: relative;
   z-index: 2;
   height: 50px;
+  white-space: nowrap;
   &:after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -56px;
+    width: calc(100% + 56px);
     height: 100%;
     background: linear-gradient(
       89.96deg,
@@ -52,8 +53,8 @@
 
 .closeMenu {
   .link {
-    padding-left: 25px;
-    padding-left: 0;
+    // padding-left: 25px;
+    // padding-left: 0;
     justify-content: center;
     &:after {
       border-radius: 14px;
