@@ -1,21 +1,16 @@
-.logo {
-  max-width: 147px;
-  width: 100%;
-}
-
 .text {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 25px;
+  max-width: 327px;
 }
 
 .well {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 79px;
+  margin-top: 76px;
   .icon {
     max-width: 24px;
     margin-right: 10px;

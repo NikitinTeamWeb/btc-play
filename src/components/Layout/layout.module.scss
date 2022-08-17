@@ -1,12 +1,32 @@
 .content {
-  display: flex;
-  justify-content: space-between;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding-right: 49px;
   background: var(--darkGrey);
   min-height: 100vh;
+  position: relative;
+}
+
+.element1 {
+  position: absolute;
+  top: 0;
+  left: 9%;
+  pointer-events: none;
+}
+
+.element2 {
+  position: absolute;
+  left: 92px;
+  top: 38.5%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+
+.contentBlock {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 49px;
 }
 
 .menu {
@@ -24,11 +44,15 @@
   max-width: 1090px;
   margin: 0 auto;
   transition: all 0.3s linear;
+  position: relative;
 }
 
 .closeMenu {
   .menu {
     width: 110px;
     margin-right: 20px;
+  }
+  .element2 {
+    opacity: 1;
   }
 }

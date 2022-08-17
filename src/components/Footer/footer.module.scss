@@ -1,9 +1,30 @@
 .content {
   background: #121212;
+  position: relative;
+}
+
+.element {
+  position: absolute;
+  bottom: 0;
+  right: -71px;
+}
+
+.block {
+  width: calc(100% - 260px);
+  margin-left: auto;
+  border-left: 2px solid var(--darkGrey);
+  padding-top: 60px;
+}
+
+.logo {
+  max-width: 147px;
+  width: 100%;
+  display: inline-block;
+  margin-left: 28px;
 }
 
 .top {
-  padding: 60px 70px 51px 20px;
+  padding: 0px 70px 31px 28px;
   display: flex;
   justify-content: space-between;
 }
@@ -12,11 +33,11 @@
   display: flex;
   justify-content: space-between;
   border-top: 2px solid #191919;
-  padding: 14px 28px;
+  padding: 14px 43px 14px 28px;
   .text {
     font-weight: 500;
     font-size: 12px;
-    line-height: 28px;
+    line-height: 38px;
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -24,20 +45,41 @@
 
 .coins {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .information {
-  padding-right: 71px;
+  padding-right: 20px;
   position: relative;
-  max-width: 398px;
+  max-width: 400px;
   width: 100%;
+  padding-top: 23px;
   &:before {
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 5%;
     width: 2px;
-    height: 70%;
+    height: 90%;
     background: #191919;
+  }
+}
+
+.links {
+  margin: 0 auto;
+  padding-left: 17px;
+  padding-top: 13px;
+}
+
+.contacts {
+  margin: 0 auto;
+  padding-top: 26px;
+}
+
+.closeMenu {
+  .block {
+    width: calc(100% - 110px);
   }
 }

@@ -40,7 +40,7 @@ const Coins = () => {
   );
 
   return (
-    <div className={styles.blocks}>
+    <>
       {coinsList.map(({ id, image }) => {
         return (
           <div className={styles.block} key={id}>
@@ -48,7 +48,7 @@ const Coins = () => {
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 

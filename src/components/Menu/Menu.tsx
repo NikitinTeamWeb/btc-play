@@ -20,7 +20,7 @@ interface IProps {
 
 const Menu: FC<IProps> = ({ setIsCloseMenu, isCloseMenu }) => {
   return (
-    <div className={cn(styles.menu, { [styles.closeMenu]: isCloseMenu })}>
+    <>
       <div
         className={styles.button}
         // @ts-ignore: Unreachable code error
@@ -30,25 +30,27 @@ const Menu: FC<IProps> = ({ setIsCloseMenu, isCloseMenu }) => {
         <span className={cn(styles.buttonLine, styles.buttonLine2)}></span>
         <span className={cn(styles.buttonLine, styles.buttonLine3)}></span>
       </div>
-      <div className={styles.menuWrapper}>
-        <div className={styles.logo}>
-          {isCloseMenu ? <LogoSmIcon /> : <LogoIcon />}
-        </div>
-        <div className={styles.list}>
-          <List isCloseMenu={isCloseMenu} />
-        </div>
-        <div className={styles.line}></div>
-        <div className={styles.block}>
-          <Language isCloseMenu={isCloseMenu} />
-          <Theme isCloseMenu={isCloseMenu} />
-        </div>
-        <div className={styles.line}></div>
-        <div className={styles.block}>
-          <Support isCloseMenu={isCloseMenu} />
-          <Socials isCloseMenu={isCloseMenu} />
+      <div className={cn(styles.menu, { [styles.closeMenu]: isCloseMenu })}>
+        <div className={styles.menuWrapper}>
+          <div className={styles.logo}>
+            {isCloseMenu ? <LogoSmIcon /> : <LogoIcon />}
+          </div>
+          <div className={styles.list}>
+            <List isCloseMenu={isCloseMenu} />
+          </div>
+          <div className={styles.line}></div>
+          <div className={styles.block}>
+            <Language isCloseMenu={isCloseMenu} />
+            <Theme isCloseMenu={isCloseMenu} />
+          </div>
+          <div className={styles.line}></div>
+          <div className={styles.block}>
+            <Support isCloseMenu={isCloseMenu} />
+            <Socials isCloseMenu={isCloseMenu} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
