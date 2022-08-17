@@ -22,14 +22,13 @@
   // padding: 0 30px;
   padding-left: 29px;
   max-width: 1090px;
+  margin: 0 auto;
+  transition: all 0.3s linear;
 }
 
 .closeMenu {
   .menu {
     width: 110px;
     margin-right: 20px;
-  }
-  .main {
-    margin: 0 auto;
   }
 }

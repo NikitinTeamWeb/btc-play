@@ -20,7 +20,8 @@
 
 .button {
   &:hover {
-    border-color: #190224;
+    border-color: #ffffff;
     color: #ffffff;
+    transform: scale(1.1);
   }
 }

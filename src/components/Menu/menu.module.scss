@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease-in;
+  overflow: hidden;
 }
 
 .logo {
@@ -79,6 +80,7 @@
   padding-left: 25px;
   .menuWrapper {
     max-width: 60px;
+    overflow: visible;
   }
   .buttonLine {
     &1 {
