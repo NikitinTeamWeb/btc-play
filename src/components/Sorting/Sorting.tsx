@@ -6,7 +6,7 @@ import styles from './sorting.module.scss';
 interface IOption {
   title: string;
   value: string;
-  icon: string;
+  icon?: string;
 }
 interface IProps {
   title?: string;
@@ -20,7 +20,7 @@ const Sorting: React.FC<IProps> = ({ title = '', options, style }) => {
   const [sortingTitle, setSortingTitle] = useState<string>('');
 
   const getSortingData = useCallback(
-    (value: string, title: string, icon: string) => {
+    (value: string, title: string, icon?: string) => {
       setSortingTitle(title);
       setSortingType(value);
       if (icon) {
@@ -31,7 +31,11 @@ const Sorting: React.FC<IProps> = ({ title = '', options, style }) => {
   );
 
   useEffect(() => {
-    getSortingData(options[0].title, options[0].value, options[0].icon);
+    {
+      options[0].icon
+        ? getSortingData(options[0].title, options[0].value, options[0].icon)
+        : getSortingData(options[0].title, options[0].value);
+    }
   }, []);
 
   return (

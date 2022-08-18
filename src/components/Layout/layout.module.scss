@@ -1,10 +1,14 @@
 .content {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  background: var(--darkGrey);
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  background: var(--darkGrey);
-  min-height: 100vh;
-  position: relative;
 }
 
 .element1 {
@@ -23,7 +27,7 @@
   transition: all 0.3s linear;
 }
 
-.contentBlock {
+.containerBlock {
   display: flex;
   justify-content: space-between;
   padding-right: 49px;

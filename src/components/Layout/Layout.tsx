@@ -25,23 +25,25 @@ const Layout: FC<IProps> = ({ title = 'Страница', children }) => {
         <title>{title}</title>
       </Head>
       <div className={cn(styles.content, { [styles.closeMenu]: isCloseMenu })}>
-        <div className={styles.contentBlock}>
-          <div className={styles.element2}>
-            <BgElement2 />
-          </div>
-          <div className={styles.menu}>
-            {isCloseMenu}
-            <Menu setIsCloseMenu={setIsCloseMenu} isCloseMenu={isCloseMenu} />
-          </div>
-          <div className={styles.main}>
-            <div className={styles.element1}>
-              <BgElement1 />
+        <div className={styles.container}>
+          <div className={styles.containerBlock}>
+            <div className={styles.element2}>
+              <BgElement2 />
             </div>
-            <Header />
-            <div className={styles['app-inner']}>{children}</div>
+            <div className={styles.menu}>
+              {isCloseMenu}
+              <Menu setIsCloseMenu={setIsCloseMenu} isCloseMenu={isCloseMenu} />
+            </div>
+            <div className={styles.main}>
+              <div className={styles.element1}>
+                <BgElement1 />
+              </div>
+              <Header />
+              <div className={styles['app-inner']}>{children}</div>
+            </div>
           </div>
+          <Footer isCloseMenu={isCloseMenu} />
         </div>
-        <Footer isCloseMenu={isCloseMenu} />
       </div>
     </div>
   );

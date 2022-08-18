@@ -82,6 +82,9 @@ img {
   z-index: 2;
   transition: all 0.3s ease-in;
   width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:before {
     content: '';
     position: absolute;
@@ -117,6 +120,17 @@ img {
   background: transparent;
   color: #ffffff;
   padding: 8px 18px;
+  &:hover {
+    border-color: #e47d22;
+    color: #190224;
+  }
+}
+
+.button-border__big {
+  padding: 13px 29px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
   &:hover {
     border-color: #e47d22;
     color: #190224;
@@ -166,4 +180,32 @@ path,
 circle,
 rect {
   transition: all 0.3s ease-in;
+}
+
+.default-input {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+  }
+  input {
+    background: #262626;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    border: none;
+    padding: 15px 15px 15px;
+    &::placeholder {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
 }

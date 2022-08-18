@@ -1,0 +1,107 @@
+.button {
+  .icon {
+    margin-left: 9px;
+  }
+  &:hover {
+    path {
+      stroke: #190224;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 575px;
+}
+
+.image {
+  max-width: 370px;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 50px 50px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 10px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  margin-left: 15px;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.optional {
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+    margin-left: 10px;
+    path {
+      stroke: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.login {
+  max-width: 170px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.registration {
+  max-width: 210px;
+  width: 100%;
+}
+
+.select {
+  margin-bottom: 30px;
+}

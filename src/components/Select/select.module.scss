@@ -67,6 +67,26 @@
   }
 }
 
+.noBackground {
+  background: transparent;
+  border: none;
+  width: max-content;
+  margin-left: 0;
+  .desktop-title {
+    padding: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .arrow {
+    right: 0;
+    path {
+      stroke: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
 .chatLanguage {
   background: var(--greyBackground);
   border-color: transparent;
