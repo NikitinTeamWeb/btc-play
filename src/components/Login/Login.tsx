@@ -1,9 +1,9 @@
-import { useMemo, useState, FC } from 'react';
+import { useMemo, FC } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 import Checkbox from '../Checkbox/Checkbox';
 
-import styles from './registration.module.scss';
+import styles from './login.module.scss';
 import Illustration from '../../assets/images/registration/Illustration.png';
 import Arrow from '../../assets/images/icons/arrow-button.svg';
 
@@ -12,15 +12,12 @@ import Facebook from '../../assets/images/registration/facebook.svg';
 import Telegram from '../../assets/images/registration/telegram.svg';
 import Twitter from '../../assets/images/registration/twitter.svg';
 import Google from '../../assets/images/registration/google.svg';
-import ArrowDownIcon from '../../assets/images/icons/icon_dropdown.svg';
 
 interface IProps {
   setIsActiveModal: (val: string) => void;
 }
 
 const Registration: FC<IProps> = ({ setIsActiveModal }) => {
-  const [isOpenOptional, setIsOpenOptional] = useState(false);
-
   const socialsList = useMemo(
     () => [
       {
@@ -62,19 +59,8 @@ const Registration: FC<IProps> = ({ setIsActiveModal }) => {
         <label>Password</label>
         <input type="text" placeholder="Enter Password" />
       </div>
-      <div className={cn('default-input', styles.item, styles.optional)}>
-        <label onClick={() => setIsOpenOptional((prev) => !prev)}>
-          Code (Optional)
-          <span
-            className={cn(styles.arrow, { [styles.rotate]: isOpenOptional })}
-          >
-            <ArrowDownIcon />
-          </span>
-        </label>
-        {isOpenOptional && (
-          <input type="text" placeholder="Enter Code (Optional)" />
-        )}
-      </div>
+      <p className={styles.forgot}>Forgot your password?</p>
+
       <div className={styles.checkbox}>
         <Checkbox name="TermsConditions">
           I am at least 18 year of age, and accept the{' '}
@@ -82,21 +68,19 @@ const Registration: FC<IProps> = ({ setIsActiveModal }) => {
         </Checkbox>
       </div>
       <div className={styles.buttons}>
+        <div className={cn('button', styles.button, styles.login)}>Login</div>
         <div
           className={cn(
-            'button button-border__big',
+            'button  button-border__big',
             styles.button,
-            styles.login
+            styles.registration
           )}
-          onClick={() => setIsActiveModal('login')}
+          onClick={() => setIsActiveModal('registration')}
         >
-          Login{' '}
+          Registration{' '}
           <span className={cn('icon', styles.icon)}>
             <Arrow />
           </span>
-        </div>
-        <div className={cn('button', styles.button, styles.registration)}>
-          Registration
         </div>
       </div>
       <div className={styles.socials}>

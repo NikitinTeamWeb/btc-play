@@ -2,4 +2,10 @@
   position: absolute;
   top: 45px;
   right: 33px;
+  cursor: pointer;
+  &:hover {
+    path {
+      stroke: #f8ad29;
+    }
+  }
 }

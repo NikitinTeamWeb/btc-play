@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import classnames from 'classnames';
 import Modal from '../Modal/Modal';
-import Registration from '../Registration/Registration';
+
+import SignIn from '../SignIn/SignIn';
 
 import styles from './header.module.scss';
 
@@ -9,16 +10,15 @@ import Search from '../Search/Search';
 import Chat from '../Chat/Chat';
 
 const Header = () => {
-  const [isChatHelp, setIsChatHelp] = useState(true);
+  const [isOpenSignIn, setIsOpenSignIn] = useState(false);
+  const [isActiveModal, setIsActiveModal] = useState('');
 
-  const [isOpenCreateBet, setIsCreateBet] = useState(false);
-
-  const openCreateBet = () => {
-    setIsCreateBet(true);
+  const openSignIn = (activeModal: string) => {
+    setIsOpenSignIn(true);
+    setIsActiveModal(activeModal);
   };
-
-  const closeCreateBet = () => {
-    setIsCreateBet(false);
+  const closeSignIn = () => {
+    setIsOpenSignIn(false);
   };
 
   return (
@@ -27,19 +27,23 @@ const Header = () => {
         <Search />
       </div>
       <div className={styles.buttons}>
-        <div className={styles.login}>Login</div>
-        <div className={styles.registration} onClick={openCreateBet}>
+        <div className={styles.login} onClick={() => openSignIn('login')}>
+          Login
+        </div>
+        <div
+          className={styles.registration}
+          onClick={() => openSignIn('registration')}
+        >
           Registration
         </div>
         <div className={styles.chat}>
           <Chat />
         </div>
-        <Modal
-          isOpen={isOpenCreateBet}
-          onClose={closeCreateBet}
-          maxWidth="890px"
-        >
-          <Registration />
+        <Modal isOpen={isOpenSignIn} onClose={closeSignIn} maxWidth="890px">
+          <SignIn
+            isActiveModal={isActiveModal}
+            setIsActiveModal={setIsActiveModal}
+          />
         </Modal>
       </div>
     </div>

@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 575px;
+}
+
+.image {
+  max-width: 370px;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 50px 50px 30px;
+  display: flex;
+  flex-direction: column;
+}
