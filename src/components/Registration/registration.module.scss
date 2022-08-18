@@ -1,45 +1,4 @@
-.button {
-  .icon {
-    margin-left: 9px;
-  }
-  &:hover {
-    path {
-      stroke: #190224;
-    }
-  }
-}
-
-.checkbox {
-  margin-top: 10px;
-}
-
-.socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 10px;
-  }
-}
-
-.links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.link {
-  margin-left: 15px;
-}
-
-.item {
-  margin-bottom: 20px;
-}
+@import '../SignIn/signIn.module.scss';
 
 .optional {
   label {
@@ -62,26 +21,4 @@
 
 .rotate {
   transform: rotate(-180deg);
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.login {
-  max-width: 170px;
-  width: 100%;
-  margin-right: 20px;
-}
-
-.registration {
-  max-width: 210px;
-  width: 100%;
-}
-
-.select {
-  margin-bottom: 30px;
 }

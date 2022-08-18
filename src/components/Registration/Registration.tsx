@@ -7,11 +7,6 @@ import styles from './registration.module.scss';
 import Illustration from '../../assets/images/registration/Illustration.png';
 import Arrow from '../../assets/images/icons/arrow-button.svg';
 
-import Discord from '../../assets/images/registration/discord.svg';
-import Facebook from '../../assets/images/registration/facebook.svg';
-import Telegram from '../../assets/images/registration/telegram.svg';
-import Twitter from '../../assets/images/registration/twitter.svg';
-import Google from '../../assets/images/registration/google.svg';
 import ArrowDownIcon from '../../assets/images/icons/icon_dropdown.svg';
 
 interface IProps {
@@ -20,37 +15,6 @@ interface IProps {
 
 const Registration: FC<IProps> = ({ setIsActiveModal }) => {
   const [isOpenOptional, setIsOpenOptional] = useState(false);
-
-  const socialsList = useMemo(
-    () => [
-      {
-        id: 0,
-        url: '/',
-        icon: <Google />,
-      },
-      {
-        id: 1,
-        url: '/',
-        icon: <Facebook />,
-      },
-      {
-        id: 2,
-        url: '/',
-        icon: <Telegram />,
-      },
-      {
-        id: 3,
-        url: '/',
-        icon: <Twitter />,
-      },
-      {
-        id: 4,
-        url: '/',
-        icon: <Discord />,
-      },
-    ],
-    []
-  );
 
   return (
     <>
@@ -97,18 +61,6 @@ const Registration: FC<IProps> = ({ setIsActiveModal }) => {
         </div>
         <div className={cn('button', styles.button, styles.registration)}>
           Registration
-        </div>
-      </div>
-      <div className={styles.socials}>
-        <p>Or continue with:</p>
-        <div className={styles.links}>
-          {socialsList.map(({ id, icon, url }) => {
-            return (
-              <Link href={url} key={id}>
-                <a className={styles.link}>{icon}</a>
-              </Link>
-            );
-          })}
         </div>
       </div>
     </>
