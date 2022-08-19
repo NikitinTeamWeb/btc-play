@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import Game from '../Game/Game';
+import Game from './Game/Game';
 
 import Game1 from '../../assets/images/banners/games/img-1.png';
 import Game2 from '../../assets/images/banners/games/img-2.png';
@@ -10,9 +10,9 @@ import Game5 from '../../assets/images/banners/games/img-5.png';
 import Game6 from '../../assets/images/banners/games/img-6.png';
 import Game7 from '../../assets/images/banners/games/img-7.png';
 
-import styles from './games.module.scss';
+import styles from './casinoGames.module.scss';
 
-const Games = () => {
+const CasinoGames = () => {
   const gamesList = useMemo(
     () => [
       {
@@ -125,4 +125,4 @@ const Games = () => {
   );
 };
 
-export default Games;
+export default CasinoGames;

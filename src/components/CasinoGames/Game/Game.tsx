@@ -2,8 +2,8 @@ import { FC } from 'react';
 import Link from 'next/link';
 import styles from './game.module.scss';
 
-import TooltipIcon from '../../assets/images/icons/tooltip.svg';
-import PlayIcon from '../../assets/images/icons/play.svg';
+import TooltipIcon from '../../../assets/images/icons/tooltip.svg';
+import PlayIcon from '../../../assets/images/icons/play.svg';
 
 interface IProps {
   title: string;

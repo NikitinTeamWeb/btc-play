@@ -3,8 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Banners from '../components/Banners/Banners';
-import CasinoGame from '../components/CasinoGame/CasinoGame';
-import Games from '../components/Games/Games';
+import BannerGames from '../components/BannerGames/BannerGames';
+import CasinoGames from '../components/CasinoGames/CasinoGames';
 import NoCrypto from '../components/NoCrypto/NoCrypto';
 import Winner from '../components/Winner/Winner';
 import Results from '../components/Results/Results';
@@ -16,8 +16,8 @@ const Home: NextPage = () => {
   return (
     <Layout title="home">
       <Banners />
-      <CasinoGame />
-      <Games />
+      <BannerGames />
+      <CasinoGames />
       <NoCrypto />
       <Winner />
       <Results />

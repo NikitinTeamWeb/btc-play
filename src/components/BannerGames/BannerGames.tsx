@@ -1,9 +1,9 @@
 import Games from './Games/Games';
 import cn from 'classnames';
 
-import styles from './casinoGame.module.scss';
+import styles from './bannerGames.module.scss';
 
-const CasinoGame = () => {
+const BannerGames = () => {
   return (
     <div className={styles.content}>
       <h2 className={cn(styles.title, 'title-section')}>Casino game</h2>
@@ -14,4 +14,4 @@ const CasinoGame = () => {
   );
 };
 
-export default CasinoGame;
+export default BannerGames;
