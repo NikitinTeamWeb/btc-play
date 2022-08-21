@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in;
+  span {
+    margin-right: 5px;
+  }
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.active {
+  color: #ffffff;
+  path {
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+}

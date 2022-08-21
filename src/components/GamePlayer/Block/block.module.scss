@@ -1,0 +1,53 @@
+.container {
+  background: #121212;
+  border-radius: 20px;
+}
+.bottom {
+  position: relative;
+  padding: 17px 30px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #262626;
+  }
+}
+
+.statitic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  &:hover {
+    path {
+      stroke: #ffffff;
+    }
+    rect {
+      stroke: #ffffff;
+    }
+  }
+}
+.fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+  &:hover {
+    path {
+      stroke: #ffffff;
+    }
+  }
+}
+
+.main {
+  padding-top: 42.7%;
+  position: relative;
+}
