@@ -1,0 +1,43 @@
+.container {
+  margin-top: -5px;
+}
+.block {
+  padding: 37px 30px 40px;
+  text-align: center;
+  background-image: url(../../assets/images/about/block-background.png);
+  background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-top: 6px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blocks {
+  background: #121212;
+  border-radius: 20px;
+  padding: 30px 36px;
+  margin-top: 20px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

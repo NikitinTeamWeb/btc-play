@@ -3,14 +3,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Layout from '../components/Layout/Layout';
-import Faq from '../components/Faq/Faq';
+import About from '../components/About/About';
 
-const FAQ: NextPage = () => {
+const AboutUs: NextPage = () => {
   return (
-    <Layout title="FAQ">
-      <Faq />
+    <Layout title="about us">
+      <About />
     </Layout>
   );
 };
 
-export default FAQ;
+export default AboutUs;
