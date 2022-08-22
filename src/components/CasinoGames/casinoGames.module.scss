@@ -2,15 +2,20 @@
   padding-top: 30px;
 }
 
-.blocks {
+.blocks:not(.isSwiper) {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-right: -20px;
+  .block {
+    width: calc(16.6666% - 20px);
+    margin-right: 20px;
+    margin-bottom: 28px;
+  }
 }
 
-.block {
-  width: calc(16.6666% - 20px);
-  margin-right: 20px;
-  margin-bottom: 28px;
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

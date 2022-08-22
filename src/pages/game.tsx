@@ -7,6 +7,7 @@ import Layout from '../components/Layout/Layout';
 import GamePlayer from '../components/GamePlayer/GamePlayer';
 import Results from '../components/Results/Results';
 import InfoGame from '../components/InfoGame/InfoGame';
+import CasinoGames from '../components/CasinoGames/CasinoGames';
 
 const Game: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Game: NextPage = () => {
       <GamePlayer />
       <Results />
       <InfoGame />
+      <CasinoGames isSwiper />
     </Layout>
   );
 };

@@ -1,5 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo, FC } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import cn from 'classnames';
 
+import SliderNavigation from '../SliderControllers/Navigation/Navigation';
 import Game from './Game/Game';
 
 import Game1 from '../../assets/images/banners/games/img-1.png';
@@ -12,7 +16,11 @@ import Game7 from '../../assets/images/banners/games/img-7.png';
 
 import styles from './casinoGames.module.scss';
 
-const CasinoGames = () => {
+interface IProps {
+  isSwiper: boolean;
+}
+
+const CasinoGames: FC<IProps> = ({ isSwiper }) => {
   const gamesList = useMemo(
     () => [
       {
@@ -104,22 +112,63 @@ const CasinoGames = () => {
     []
   );
 
+  const sliderParams = useMemo(
+    () => ({
+      spaceBetween: 20,
+      slidesPerView: 6,
+      autoHeight: true,
+      modules: [Pagination, Navigation],
+      className: 'gameProvider-swiper',
+      navigation: {
+        nextEl: '.gameProvider-next-btn',
+        prevEl: '.gameProvider-prev-btn',
+      },
+    }),
+    []
+  );
+
   return (
     <div className={styles.container}>
-      <div className={styles.blocks}>
-        {gamesList.map(({ id, title, image, url, edge, coomigSoon }) => {
-          return (
-            <div className={styles.block} key={id}>
-              <Game
-                title={title}
-                image={image}
-                url={url}
-                edge={edge}
-                coomigSoon={coomigSoon}
-              />
-            </div>
-          );
-        })}
+      {isSwiper && (
+        <div className={styles.top}>
+          <h2 className={cn('title-section')}>Casino game</h2>
+          <div className={styles.controlles}>
+            <SliderNavigation extClassName="gameProvider" />
+          </div>
+        </div>
+      )}
+      <div className={cn(styles.blocks, { [styles.isSwiper]: isSwiper })}>
+        {isSwiper ? (
+          <Swiper {...sliderParams}>
+            {gamesList.map(({ id, title, image, url, edge, coomigSoon }) => {
+              return (
+                <SwiperSlide key={id} className={styles.block}>
+                  <Game
+                    title={title}
+                    image={image}
+                    url={url}
+                    edge={edge}
+                    coomigSoon={coomigSoon}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        ) : (
+          gamesList.map(({ id, title, image, url, edge, coomigSoon }) => {
+            return (
+              <div className={styles.block} key={id}>
+                <Game
+                  title={title}
+                  image={image}
+                  url={url}
+                  edge={edge}
+                  coomigSoon={coomigSoon}
+                />
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );
