@@ -1,0 +1,45 @@
+.container {
+  border-bottom: 1px solid #262626;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 11px;
+  padding-right: 20px;
+}
+
+.active {
+  .icon {
+    transform: rotate(-180deg);
+  }
+}
