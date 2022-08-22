@@ -14,9 +14,10 @@ import BgElement2 from '../../assets/images/main/bg-el3.svg';
 interface IProps {
   title: string;
   children: ReactNode;
+  noFooter?: boolean;
 }
 
-const Layout: FC<IProps> = ({ title = 'Страница', children }) => {
+const Layout: FC<IProps> = ({ title = 'Страница', children, noFooter }) => {
   const [isCloseMenu, setIsCloseMenu] = useState(false);
 
   return (
@@ -42,7 +43,7 @@ const Layout: FC<IProps> = ({ title = 'Страница', children }) => {
               <div className={styles['app-inner']}>{children}</div>
             </div>
           </div>
-          <Footer isCloseMenu={isCloseMenu} />
+          {!noFooter && <Footer isCloseMenu={isCloseMenu} />}
         </div>
       </div>
     </div>
