@@ -1,14 +1,23 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, FC } from 'react';
 import Sorting from '../Sorting/Sorting';
 import CategoryTabs from './CategoryTabs/CategoryTabs';
-import Races from '../Races/Races';
-import AllBets from '../AllBets/AllBets';
 
 import IncognitoIcon from '../../assets/images/icons/icon_incognito.svg';
 
 import styles from './results.module.scss';
 
-const Results = () => {
+interface ICategory {
+  id: number;
+  component: any;
+  category: string;
+  title: string;
+}
+
+interface IProps {
+  resultsCategory?: Array<ICategory>;
+}
+
+const Results: FC<IProps> = ({ resultsCategory }) => {
   const [isActiveCatagery, setIsActiveCatagery] = useState('myBets');
 
   const options = useMemo(
@@ -33,28 +42,6 @@ const Results = () => {
     []
   );
 
-  const category = useMemo(
-    () => [
-      {
-        component: <AllBets />,
-        category: 'myBets',
-      },
-      {
-        component: <AllBets />,
-        category: 'allBets',
-      },
-      {
-        component: <AllBets />,
-        category: 'highRollersBets',
-      },
-      {
-        component: <Races />,
-        category: 'races',
-      },
-    ],
-    []
-  );
-
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -62,6 +49,7 @@ const Results = () => {
           <CategoryTabs
             setIsActiveCatagery={setIsActiveCatagery}
             isActiveCatagery={isActiveCatagery}
+            resultsCategory={resultsCategory}
           />
         </div>
         <div className={styles.incognito}>
@@ -75,14 +63,15 @@ const Results = () => {
         </div>
       </div>
       <div className={styles.content}>
-        {category.map(
-          ({ category, component }) =>
-            isActiveCatagery === category && (
-              <div className={styles.bottom} key={category}>
-                {component}
-              </div>
-            )
-        )}
+        {resultsCategory &&
+          resultsCategory.map(
+            ({ id, category, component }) =>
+              isActiveCatagery === category && (
+                <div className={styles.bottom} key={id}>
+                  {component}
+                </div>
+              )
+          )}
       </div>
     </div>
   );

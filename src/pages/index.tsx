@@ -10,9 +10,13 @@ import Winner from '../components/Winner/Winner';
 import Results from '../components/Results/Results';
 import GameProviders from '../components/GameProviders/GameProviders';
 
+import { resultsCategory } from '../components/Results/main';
+
 import Layout from '../components/Layout/Layout';
 
 const Home: NextPage = () => {
+  console.log(resultsCategory);
+
   return (
     <Layout title="home">
       <Banners />
@@ -20,7 +24,7 @@ const Home: NextPage = () => {
       <CasinoGames />
       <NoCrypto />
       <Winner />
-      <Results />
+      <Results resultsCategory={resultsCategory} />
       <GameProviders />
     </Layout>
   );

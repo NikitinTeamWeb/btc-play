@@ -9,13 +9,15 @@ import Results from '../components/Results/Results';
 import InfoGame from '../components/InfoGame/InfoGame';
 import CasinoGames from '../components/CasinoGames/CasinoGames';
 
+import { resultsCategory } from '../components/Results/game';
+
 const Game: NextPage = () => {
   return (
     <Layout title="home">
       <GamePlayer />
-      <Results />
+      <Results resultsCategory={resultsCategory} />
       <InfoGame />
-      <CasinoGames isSwiper />
+      <CasinoGames isSwiper isGamePage />
     </Layout>
   );
 };

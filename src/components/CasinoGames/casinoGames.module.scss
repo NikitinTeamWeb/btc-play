@@ -2,6 +2,10 @@
   padding-top: 30px;
 }
 
+.gamePage {
+  padding-bottom: 60px;
+}
+
 .blocks:not(.isSwiper) {
   display: flex;
   justify-content: flex-start;
@@ -18,4 +22,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }

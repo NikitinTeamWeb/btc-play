@@ -17,10 +17,11 @@ import Game7 from '../../assets/images/banners/games/img-7.png';
 import styles from './casinoGames.module.scss';
 
 interface IProps {
-  isSwiper: boolean;
+  isSwiper?: boolean;
+  isGamePage?: boolean;
 }
 
-const CasinoGames: FC<IProps> = ({ isSwiper }) => {
+const CasinoGames: FC<IProps> = ({ isSwiper, isGamePage }) => {
   const gamesList = useMemo(
     () => [
       {
@@ -118,22 +119,22 @@ const CasinoGames: FC<IProps> = ({ isSwiper }) => {
       slidesPerView: 6,
       autoHeight: true,
       modules: [Pagination, Navigation],
-      className: 'gameProvider-swiper',
+      className: 'casinoGames-swiper',
       navigation: {
-        nextEl: '.gameProvider-next-btn',
-        prevEl: '.gameProvider-prev-btn',
+        nextEl: '.casinoGames-next-btn',
+        prevEl: '.casinoGames-prev-btn',
       },
     }),
     []
   );
 
   return (
-    <div className={styles.container}>
+    <div className={cn(styles.container, { [styles.gamePage]: isGamePage })}>
       {isSwiper && (
         <div className={styles.top}>
           <h2 className={cn('title-section')}>Casino game</h2>
           <div className={styles.controlles}>
-            <SliderNavigation extClassName="gameProvider" />
+            <SliderNavigation extClassName="casinoGames" />
           </div>
         </div>
       )}
