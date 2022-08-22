@@ -3,12 +3,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Layout from '../components/Layout/Layout';
-import About from '../components/About/About';
+import ResponsibleG from '../components/ResponsibleG/ResponsibleG';
 
 const AboutUs: NextPage = () => {
   return (
-    <Layout title="About us">
-      <About />
+    <Layout title="Responsible GaminG">
+      <ResponsibleG />
     </Layout>
   );
 };
