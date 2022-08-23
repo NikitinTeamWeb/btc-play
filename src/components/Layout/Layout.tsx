@@ -19,31 +19,38 @@ interface IProps {
 
 const Layout: FC<IProps> = ({ title = 'Страница', children, noFooter }) => {
   const [isCloseMenu, setIsCloseMenu] = useState(false);
+  const [isOpenSearchBlock, setIsOpenSearchBlock] = useState(false);
 
   return (
     <div className={styles['app']}>
       <Head>
         <title>{title}</title>
       </Head>
-      <div className={cn(styles.content, { [styles.closeMenu]: isCloseMenu })}>
+      <div
+        className={cn(
+          styles.content,
+          { [styles.closeMenu]: isCloseMenu },
+          { [styles.searchResult]: isOpenSearchBlock }
+        )}
+      >
         <div className={styles.container}>
-          <div className={styles.containerBlock}>
-            <div className={styles.element2}>
-              <BgElement2 />
-            </div>
-            <div className={styles.menu}>
-              {isCloseMenu}
-              <Menu setIsCloseMenu={setIsCloseMenu} isCloseMenu={isCloseMenu} />
-            </div>
-            <div className={styles.main}>
+          <div className={styles.element2}>
+            <BgElement2 />
+          </div>
+          <div className={styles.menu}>
+            {isCloseMenu}
+            <Menu setIsCloseMenu={setIsCloseMenu} isCloseMenu={isCloseMenu} />
+          </div>
+          <div className={styles.main}>
+            <div className={styles.mainBlock}>
               <div className={styles.element1}>
                 <BgElement1 />
               </div>
-              <Header />
+              <Header setIsOpenSearchBlock={setIsOpenSearchBlock} />
               <div className={styles['app-inner']}>{children}</div>
             </div>
+            {!noFooter && <Footer isCloseMenu={isCloseMenu} />}
           </div>
-          {!noFooter && <Footer isCloseMenu={isCloseMenu} />}
         </div>
       </div>
     </div>

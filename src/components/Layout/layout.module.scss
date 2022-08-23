@@ -10,6 +10,8 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 .element1 {
@@ -29,13 +31,6 @@
   transition: all 0.3s linear;
 }
 
-.containerBlock {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 49px;
-  overflow: hidden;
-}
-
 .menu {
   width: 260px;
   transition: all 0.3s linear;
@@ -47,12 +42,17 @@
 .main {
   width: calc(100% - 260px);
   // padding: 0 30px;
-  padding-left: 29px;
-  max-width: 1090px;
-  margin: 0 auto;
   transition: all 0.3s linear;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+}
+
+.mainBlock {
+  padding-right: 49px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 29px;
 }
 
 .closeMenu {
@@ -62,5 +62,14 @@
   }
   .element2 {
     opacity: 1;
+  }
+  .main {
+    width: calc(100% - 110px);
+  }
+}
+
+.searchResult {
+  .main {
+    z-index: 2;
   }
 }

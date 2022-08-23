@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import classnames from 'classnames';
+import { useState, FC } from 'react';
+
 import Modal from '../Modal/Modal';
 
 import SignIn from '../SignIn/SignIn';
@@ -9,7 +9,11 @@ import styles from './header.module.scss';
 import Search from '../Search/Search';
 import Chat from '../Chat/Chat';
 
-const Header = () => {
+interface IProps {
+  setIsOpenSearchBlock: (val: boolean) => void;
+}
+
+const Header: FC<IProps> = ({ setIsOpenSearchBlock }) => {
   const [isOpenSignIn, setIsOpenSignIn] = useState(false);
   const [isActiveModal, setIsActiveModal] = useState('');
 
@@ -24,7 +28,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.search}>
-        <Search />
+        <Search setIsOpenSearchBlock={setIsOpenSearchBlock} />
       </div>
       <div className={styles.buttons}>
         <div className={styles.login} onClick={() => openSignIn('login')}>

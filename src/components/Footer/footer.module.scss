@@ -10,7 +10,7 @@
 }
 
 .block {
-  width: calc(100% - 260px);
+  // width: calc(100% - 260px);
   margin-left: auto;
   border-left: 2px solid var(--darkGrey);
   padding-top: 60px;
@@ -78,8 +78,8 @@
   padding-top: 26px;
 }
 
-.closeMenu {
-  .block {
-    width: calc(100% - 110px);
-  }
-}
+// .closeMenu {
+//   .block {
+//     width: calc(100% - 110px);
+//   }
+// }
