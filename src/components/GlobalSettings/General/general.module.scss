@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.block {
+  width: calc(50% - 12.5px);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.button {
+  max-width: 110px;
+  width: 100%;
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+.description {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+}

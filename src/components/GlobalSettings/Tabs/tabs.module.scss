@@ -1,0 +1,35 @@
+.tab {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #8d8d8d;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover {
+    color: #ffffff;
+    path {
+      fill: #ffffff;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  path {
+    fill: #8d8d8d;
+  }
+}
+
+.active {
+  color: #ffffff;
+  path {
+    fill: #ffffff;
+  }
+}

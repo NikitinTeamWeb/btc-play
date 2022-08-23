@@ -47,7 +47,9 @@ const Layout: FC<IProps> = ({ title = 'Страница', children, noFooter }) 
                 <BgElement1 />
               </div>
               <Header setIsOpenSearchBlock={setIsOpenSearchBlock} />
-              <div className={styles['app-inner']}>{children}</div>
+              <div className={cn(styles['app-inner'], styles.section)}>
+                {children}
+              </div>
             </div>
             {!noFooter && <Footer isCloseMenu={isCloseMenu} />}
           </div>
