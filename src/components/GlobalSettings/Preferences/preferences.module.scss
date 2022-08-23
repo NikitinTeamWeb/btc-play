@@ -1,0 +1,48 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 723px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 220px;
+  width: 100%;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.red {
+  background: #eb5757;
+  color: #ffffff;
+}
+
+.password {
+  max-width: 247px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.twoFactor {
+  max-width: 197px;
+  width: 100%;
+  margin-right: 30px;
+}
