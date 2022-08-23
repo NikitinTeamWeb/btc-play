@@ -48,7 +48,7 @@ const General = () => {
           </div>
           <div className={cn('default-input ', styles.item)}>
             <label>Phone number</label>
-            <input type="email" value="125252523" />
+            <input type="text" value="125252523" />
           </div>
           <div className={styles.buttons}>
             <Link href="#">

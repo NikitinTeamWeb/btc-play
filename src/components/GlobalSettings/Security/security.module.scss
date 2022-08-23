@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.block {
+  width: calc(50% - 12.5px);
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.button {
+  max-width: 130px;
+  width: 100%;
+}
+
+.qrcode {
+  background: #262626;
+  border-radius: 15px;
+  padding: 20px 30px 40px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.image {
+  max-width: 200px;
+  width: 100%;
+  margin: 15px auto;
+}
