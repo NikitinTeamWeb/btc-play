@@ -1,0 +1,63 @@
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  border: none;
+  padding: 13px 31px 13px 20px;
+  margin-right: 20px;
+  width: max-content;
+  .icon {
+    margin-right: 16px;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .icon {
+    max-width: 24px;
+    width: 100%;
+    min-width: 24px;
+    margin-right: 10px;
+  }
+}
+
+.description {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.nofile {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.4;
+}

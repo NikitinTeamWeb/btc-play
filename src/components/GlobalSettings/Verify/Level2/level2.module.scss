@@ -1,0 +1,33 @@
+.error {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #eb5757;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.4;
+  margin-top: 10px;
+}
+
+.item {
+  margin-top: 20px;
+}
+
+.button {
+  max-width: 130px;
+  width: 100%;
+  margin-top: 30px;
+}

@@ -1,3 +1,7 @@
+import cn from 'classnames';
+
+import Document from '../../Document/Document';
+
 import styles from './level2.module.scss';
 
 const Level2 = () => {
@@ -16,6 +20,13 @@ const Level2 = () => {
         <p className={styles.description}>
           Following file types are accepted: .png, .jpg, .pdf
         </p>
+        <div className={styles.item}>
+          <Document title="Proof of Identity (Front)" />
+        </div>
+        <div className={styles.item}>
+          <Document title="Proof of Identity (Back)" />
+        </div>
+        <div className={cn(styles.button, 'button button-sm')}>Upload</div>
       </div>
     </div>
   );
