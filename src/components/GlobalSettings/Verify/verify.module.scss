@@ -1,0 +1,36 @@
+.content {
+  max-width: 730px;
+  width: 100%;
+}
+
+.item {
+  margin-bottom: 25px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.active {
+  .icon {
+    transform: rotate(-180deg);
+  }
+}

@@ -1,0 +1,28 @@
+.container {
+  padding: 20px 0;
+}
+.item {
+  margin-bottom: 20px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  .item {
+    width: calc(50% - 15px);
+  }
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  input {
+    width: calc(33.333% - 30px);
+    margin: 0 15px;
+  }
+}
+
+.button {
+  max-width: 130px;
+}
