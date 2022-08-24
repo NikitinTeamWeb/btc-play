@@ -1,10 +1,36 @@
+import { useState } from 'react';
 import cn from 'classnames';
 
 import styles from './security.module.scss';
 
 import QRcode from '../../../assets/images/globalSettings/qrcode.png';
+import CopyIcon from '../../../assets/images/globalSettings/copy.svg';
 
 const Security = () => {
+  const copyText = 'AFSDGHDHRFRET3FDFGVBXFTHDRYHGSE5TS';
+  const [isCopied, setIsCopied] = useState(false);
+
+  async function copyTextToClipboard(text: any) {
+    if ('clipboard' in navigator) {
+      return await navigator.clipboard.writeText(text);
+    } else {
+      return document.execCommand('copy', true, text);
+    }
+  }
+
+  const handleCopyClick = () => {
+    copyTextToClipboard(copyText)
+      .then(() => {
+        setIsCopied(true);
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 1500);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -30,11 +56,12 @@ const Security = () => {
           <h2 className={styles.title}>Phone</h2>
           <div className={cn('default-input copy', styles.item)}>
             <label>Copy this code to your authenticator app</label>
-            <input
-              type="text"
-              value="AFSDGHDHRFRET3FDFGVBXFTHDRYHGSE5TS"
-              readOnly
-            />
+            <div className="copy">
+              <input type="text" value={copyText} readOnly />
+              <span onClick={handleCopyClick}>
+                <CopyIcon />
+              </span>
+            </div>
           </div>
           <div className={styles.qrcode}>
             <p className={styles.text}>Don't let anyone see this!</p>
