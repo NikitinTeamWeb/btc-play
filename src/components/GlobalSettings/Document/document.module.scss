@@ -22,6 +22,11 @@
   .icon {
     margin-right: 16px;
   }
+  &:hover {
+    path {
+      fill: #190224;
+    }
+  }
 }
 
 .icon {
