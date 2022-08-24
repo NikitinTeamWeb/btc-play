@@ -1,0 +1,60 @@
+.container {
+  background: #262626;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 25px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.progress {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 26px;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.result {
+  background: linear-gradient(270deg, #f8ad29 -0.69%, #e47d22 100%);
+  border-radius: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.disabled {
+  .result {
+    background: #eb5757;
+  }
+  .icon {
+    path {
+      fill: #eb5757;
+    }
+  }
+}

@@ -26,6 +26,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.message {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 430px;
+  z-index: -1;
 }
 
 .content {

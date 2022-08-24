@@ -1,61 +1,76 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { useState, useEffect } from 'react';
+import { Trans } from '@lingui/macro';
+import cn from 'classnames';
 import ReactPaginate from 'react-paginate';
+import styles from './pagination.module.scss';
 
-// Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+import Arrow from 'images/icons/arrow-left.svg';
+import Rotate from 'images/icons/rotate.svg';
 
-function Items({ currentItems }) {
-  return (
-    <>
-      {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
-    </>
-  );
+interface IProps {
+  current: number;
+  size: number;
+  total: number;
+  onChange: (any) => void;
+  onShowMore: (any) => void;
 }
 
-const PaginatedItems = ({ itemsPerPage }) => {
-  // We start with an empty list of items.
-  const [currentItems, setCurrentItems] = useState(null);
+const Pagination: React.FC<IProps> = ({
+  current,
+  size,
+  total,
+  onChange,
+  onShowMore,
+}) => {
   const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    // Fetch items from another resources.
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(items.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+    setPageCount(Math.ceil(total / size));
+  }, [total, size]);
 
-  // Invoke when user click to request another page.
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
+  // const handlePageClick = (event: any) => {
+  //   const newOffset = (event.selected * itemsPerPage) % items.length;
+  //   setItemOffset(newOffset);
+  // };
+
+  if (total <= size) {
+    return <></>;
+  }
 
   return (
-    <>
-      <Items currentItems={currentItems} />
+    <div className={styles.pagination}>
+      {current < pageCount && (
+        <div className={styles.more} onClick={onShowMore}>
+          <Rotate />{' '}
+          <span>
+            <Trans>Показати ще</Trans>
+          </span>
+        </div>
+      )}
+
       <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        nextLabel={<Arrow />}
+        onPageChange={onChange}
         pageCount={pageCount}
-        previousLabel="< previous"
+        forcePage={current - 1}
+        pageRangeDisplayed={2}
+        marginPagesDisplayed={1}
+        previousLabel={<Arrow />}
+        pageClassName={styles.btn}
+        previousClassName={styles.left}
+        previousLinkClassName={styles.arrow}
+        nextClassName={styles.right}
+        nextLinkClassName={cn(styles.arrow, styles['arrow-right'])}
+        breakLabel="..."
+        breakClassName={styles.btn}
+        containerClassName={styles.btns}
+        activeClassName={styles.active}
         renderOnZeroPageCount={null}
+        disabledClassName={styles.disabled}
       />
-    </>
+    </div>
   );
 };
-export default PaginatedItems;
+
+export default Pagination;

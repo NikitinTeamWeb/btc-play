@@ -3,6 +3,7 @@ import { useState } from 'react';
 import cn from 'classnames';
 
 import Tabs from './Tabs/Tabs';
+import Message from './Message/Message';
 import { settingsList } from './settingsList';
 
 import SettingsIcon from '../../assets/images/globalSettings/setting-2.svg';
@@ -21,6 +22,9 @@ const GlobalSettings = () => {
         <h1 className={cn('title-section', styles.title)}>Global settings</h1>
         <div className={styles.close}>
           <CloseIcon />
+          <div className={styles.message}>
+            <Message />
+          </div>
         </div>
       </div>
       <div className={styles.content}>
