@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import cn from 'classnames';
 import CallIcon from '../../../assets/images/globalSettings/call-calling.svg';
 import Key from '../../../assets/images/globalSettings/key.svg';
 
 import styles from './message.module.scss';
 
-const Message = () => {
-  const [isStatus, setIsStatus] = useState('twoFactorDisabled');
+interface IProps {
+  isStatus: string;
+}
+
+const Message: FC<IProps> = ({ isStatus }) => {
+  // const [isStatus, setIsStatus] = useState('twoFactorDisabled');
   return (
     <div
       className={cn(styles.container, {

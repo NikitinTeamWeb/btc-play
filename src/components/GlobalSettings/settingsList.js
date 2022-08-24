@@ -16,12 +16,14 @@ export const settingsList = [
     title: 'General',
     icon: <GeneralIcon />,
     component: <General />,
+    message: 'updateNumber',
   },
   {
     id: 1,
     title: 'Security',
     icon: <SecurityIcon />,
     component: <Security />,
+    message: 'twoFactorEnabled',
   },
   {
     id: 2,

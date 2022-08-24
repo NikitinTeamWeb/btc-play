@@ -13,6 +13,8 @@ import styles from './globalSettings.module.scss';
 const GlobalSettings = () => {
   const [isActiveCatagery, setIsActiveCatagery] = useState(0);
 
+  const [isStatus, setIsStatus] = useState('');
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -22,9 +24,11 @@ const GlobalSettings = () => {
         <h1 className={cn('title-section', styles.title)}>Global settings</h1>
         <div className={styles.close}>
           <CloseIcon />
-          <div className={styles.message}>
-            <Message />
-          </div>
+          {isStatus.length > 0 && (
+            <div className={styles.message}>
+              <Message isStatus={isStatus} />
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.content}>
@@ -33,6 +37,7 @@ const GlobalSettings = () => {
             setIsActiveCatagery={setIsActiveCatagery}
             isActiveCatagery={isActiveCatagery}
             helpList={settingsList}
+            setIsStatus={setIsStatus}
           />
         </div>
         <div className={styles.block}>
