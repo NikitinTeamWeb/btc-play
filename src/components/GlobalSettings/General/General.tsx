@@ -10,6 +10,7 @@ import styles from './general.module.scss';
 
 const General = () => {
   const [isOpenVerification, setIsOpenVerification] = useState(false);
+  const [isChangeNumber, setIsChangeNumber] = useState(false);
 
   const options = useMemo(
     () => [
@@ -52,32 +53,62 @@ const General = () => {
         </div>
         <div className={styles.block}>
           <h2 className={styles.title}>Phone</h2>
-          <div className={cn('default-input select', styles.item)}>
-            <label>Country Code</label>
-            <div className={styles.select}>
-              <Sorting options={options} style="grey" />
-            </div>
-          </div>
-          <div className={cn('default-input ', styles.item)}>
-            <label>Phone number</label>
-            <input type="text" value="125252523" />
-          </div>
-          <div className={styles.buttons}>
-            <Link href="#">
-              <a className={cn(styles.button, 'button button-sm')}>Resend</a>
-            </Link>
+          {isChangeNumber ? (
+            <>
+              <div className={cn('default-input select', styles.item)}>
+                <label>Country Code</label>
+                <div className={styles.select}>
+                  <Sorting options={options} style="grey" />
+                </div>
+              </div>
+              <div className={cn('default-input ', styles.item)}>
+                <label>Phone number</label>
+                <input type="text" value="125252523" />
+              </div>
+              <div className={styles.buttons}>
+                <Link href="#">
+                  <a className={cn(styles.button, 'button button-sm')}>
+                    Resend
+                  </a>
+                </Link>
 
-            <div
-              className={cn(styles.button, 'button button-border button-sm')}
-              onClick={openVerification}
-            >
-              Verify
-            </div>
-          </div>
-          <p className={styles.description}>
-            Disclaimer: We only service areas that are listed in the available
-            country code list.
-          </p>
+                <div
+                  className={cn(
+                    styles.button,
+                    'button button-border button-sm'
+                  )}
+                  onClick={openVerification}
+                >
+                  Verify
+                </div>
+              </div>
+              <p className={styles.description}>
+                Disclaimer: We only service areas that are listed in the
+                available country code list.
+              </p>
+            </>
+          ) : (
+            <>
+              <div
+                className={cn('default-input ', styles.item, styles.readOnly)}
+              >
+                <label>Country Code</label>
+                <input type="text" value="+1 Canada" readOnly />
+              </div>
+              <div
+                className={cn('default-input ', styles.item, styles.readOnly)}
+              >
+                <label>Phone number</label>
+                <input type="text" value="125252523" readOnly />
+              </div>
+              <div
+                className={cn(styles.button, 'button button-sm')}
+                onClick={() => setIsChangeNumber(true)}
+              >
+                Change
+              </div>
+            </>
+          )}
         </div>
       </div>
       <Modal

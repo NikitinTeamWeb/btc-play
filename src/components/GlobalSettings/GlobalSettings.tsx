@@ -14,6 +14,7 @@ const GlobalSettings = () => {
   const [isActiveCatagery, setIsActiveCatagery] = useState(0);
 
   const [isStatus, setIsStatus] = useState('');
+  const [isActiveMessage, setIsActiveMessage] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -24,7 +25,7 @@ const GlobalSettings = () => {
         <h1 className={cn('title-section', styles.title)}>Global settings</h1>
         <div className={styles.close}>
           <CloseIcon />
-          {isStatus.length > 0 && (
+          {isStatus.length > 0 && isActiveMessage && (
             <div className={styles.message}>
               <Message isStatus={isStatus} />
             </div>
