@@ -1,12 +1,16 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import cn from 'classnames';
 
 import Sorting from '../../Sorting/Sorting';
+import Modal from '../../Modal/Modal';
+import VerificationModal from '../../VerificationModal/VerificationModal';
 
 import styles from './general.module.scss';
 
 const General = () => {
+  const [isOpenVerification, setIsOpenVerification] = useState(false);
+
   const options = useMemo(
     () => [
       {
@@ -28,6 +32,14 @@ const General = () => {
     ],
     []
   );
+
+  const openVerification = () => {
+    setIsOpenVerification(true);
+  };
+
+  const closeVerification = () => {
+    setIsOpenVerification(false);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -54,13 +66,13 @@ const General = () => {
             <Link href="#">
               <a className={cn(styles.button, 'button button-sm')}>Resend</a>
             </Link>
-            <Link href="#">
-              <a
-                className={cn(styles.button, 'button button-border button-sm')}
-              >
-                Verify
-              </a>
-            </Link>
+
+            <div
+              className={cn(styles.button, 'button button-border button-sm')}
+              onClick={openVerification}
+            >
+              Verify
+            </div>
           </div>
           <p className={styles.description}>
             Disclaimer: We only service areas that are listed in the available
@@ -68,6 +80,13 @@ const General = () => {
           </p>
         </div>
       </div>
+      <Modal
+        isOpen={isOpenVerification}
+        onClose={closeVerification}
+        maxWidth="500px"
+      >
+        <VerificationModal />
+      </Modal>
     </div>
   );
 };

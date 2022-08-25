@@ -10,7 +10,6 @@ interface IProps {
 }
 
 const Message: FC<IProps> = ({ isStatus }) => {
-  // const [isStatus, setIsStatus] = useState('twoFactorDisabled');
   return (
     <div
       className={cn(styles.container, {
